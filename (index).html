@@ -1,0 +1,2760 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Untuk Frall ❤️ — dari Liam</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Dancing+Script:wght@400;600;700&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ===== CONFIG & RESET ===== */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
+body { font-family: 'Nunito', 'Georgia', serif; background: #fff9fc; color: #3d1f2e; overflow-x: hidden; cursor: default; }
+
+/* ===== CSS VARIABLES ===== */
+:root {
+  --pink: #f9a8c4;
+  --pink-light: #fde8f2;
+  --pink-dark: #e06990;
+  --pink-deep: #c94878;
+  --rose-gold: #c9856a;
+  --rose-light: #f5d5c8;
+  --lavender: #c5b4ec;
+  --lavender-light: #f0ecff;
+  --purple: #9b6dda;
+  --purple-dark: #7651b8;
+  --champagne: #dcc078;
+  --gold: #c9a84c;
+  --warm-white: #fff9fc;
+  --cream: #fff3f8;
+  --dark: #2a1020;
+  --dark2: #3d1f2e;
+  --text: #4a2535;
+  --text-soft: #8a6578;
+  --glass: rgba(255,249,252,0.75);
+  --glass-dark: rgba(42,16,32,0.65);
+  --shadow-pink: 0 8px 40px rgba(249,168,196,0.35);
+  --shadow-purple: 0 8px 40px rgba(155,109,218,0.3);
+  --shadow-soft: 0 4px 30px rgba(74,37,53,0.12);
+  --shadow-card: 0 8px 32px rgba(74,37,53,0.08);
+  --radius: 20px;
+  --radius-lg: 32px;
+  --radius-xl: 48px;
+}
+
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--pink-light); }
+::-webkit-scrollbar-thumb { background: linear-gradient(var(--pink), var(--lavender)); border-radius: 999px; }
+
+/* ===== AURORA BACKGROUND ===== */
+.aurora-bg {
+  position: fixed; inset: 0; z-index: -1; pointer-events: none;
+  background: linear-gradient(135deg, #fff0f7 0%, #fff9fc 25%, #f5eeff 50%, #fff0f7 75%, #fff9f3 100%);
+}
+.aurora-bg::before {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(ellipse 80% 60% at 20% 20%, rgba(249,168,196,0.25) 0%, transparent 60%),
+              radial-gradient(ellipse 60% 80% at 80% 80%, rgba(197,180,236,0.25) 0%, transparent 60%),
+              radial-gradient(ellipse 70% 50% at 50% 50%, rgba(220,192,120,0.12) 0%, transparent 70%);
+  animation: auroraShift 12s ease-in-out infinite alternate;
+}
+@keyframes auroraShift {
+  0% { opacity: 0.6; transform: scale(1) rotate(0deg); }
+  100% { opacity: 1; transform: scale(1.05) rotate(2deg); }
+}
+
+/* ===== SPLASH SCREEN ===== */
+#splash {
+  position: fixed; inset: 0; z-index: 9999;
+  background: radial-gradient(ellipse at center, #1a0828 0%, #0d0318 40%, #050010 100%);
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  transition: opacity 1.2s ease, visibility 1.2s ease;
+}
+#splash.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+#splash-canvas { position: absolute; inset: 0; }
+.splash-content { position: relative; z-index: 10; text-align: center; padding: 2rem; }
+.splash-moon {
+  width: 90px; height: 90px; border-radius: 50%; margin: 0 auto 2rem;
+  background: radial-gradient(circle at 35% 35%, #fff8e8, #ffd97a 40%, #c9a020 100%);
+  box-shadow: 0 0 60px rgba(255,220,100,0.6), 0 0 120px rgba(255,200,80,0.3);
+  animation: moonGlow 3s ease-in-out infinite alternate;
+}
+@keyframes moonGlow {
+  0% { box-shadow: 0 0 60px rgba(255,220,100,0.6), 0 0 120px rgba(255,200,80,0.3); }
+  100% { box-shadow: 0 0 80px rgba(255,230,120,0.8), 0 0 160px rgba(255,210,100,0.4); }
+}
+.splash-typed {
+  font-family: 'Dancing Script', cursive; font-size: clamp(1.8rem, 5vw, 3rem);
+  color: #fff; line-height: 1.6; min-height: 4em; text-shadow: 0 0 20px rgba(255,180,200,0.5);
+}
+.splash-typed .cursor { display: inline-block; width: 2px; height: 1em; background: #f9a8c4; animation: blink 0.7s step-end infinite; vertical-align: text-bottom; margin-left: 2px; }
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+.splash-btn {
+  margin-top: 2.5rem; padding: 1rem 2.5rem;
+  background: linear-gradient(135deg, var(--pink), var(--lavender));
+  border: none; border-radius: 999px; color: #fff;
+  font-family: 'Nunito', sans-serif; font-size: 1.1rem; font-weight: 700;
+  cursor: pointer; opacity: 0; transition: opacity 0.5s, transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 8px 30px rgba(249,168,196,0.5); letter-spacing: 0.5px;
+}
+.splash-btn.visible { opacity: 1; }
+.splash-btn:hover { transform: translateY(-3px) scale(1.05); box-shadow: 0 12px 40px rgba(249,168,196,0.7); }
+.splash-hearts { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+.splash-heart { position: absolute; font-size: 1.5rem; animation: floatHeart linear infinite; opacity: 0; }
+@keyframes floatHeart {
+  0% { transform: translateY(100vh) scale(0); opacity: 0; }
+  10% { opacity: 0.7; }
+  90% { opacity: 0.4; }
+  100% { transform: translateY(-20vh) scale(1.2) rotate(20deg); opacity: 0; }
+}
+
+/* ===== NAV ===== */
+#nav {
+  position: fixed; top: 1.2rem; left: 50%; transform: translateX(-50%);
+  z-index: 1000; opacity: 0; transition: opacity 0.5s;
+}
+#nav.visible { opacity: 1; }
+.nav-pill {
+  background: var(--glass); backdrop-filter: blur(20px);
+  border: 1px solid rgba(249,168,196,0.3); border-radius: 999px;
+  padding: 0.6rem 1.2rem; display: flex; gap: 0.3rem; align-items: center;
+  box-shadow: var(--shadow-soft);
+}
+.nav-dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--pink-light); cursor: pointer; transition: all 0.3s;
+  border: 1.5px solid transparent;
+}
+.nav-dot:hover, .nav-dot.active { background: var(--pink-dark); transform: scale(1.3); border-color: var(--pink); }
+.nav-logo {
+  font-family: 'Dancing Script', cursive; font-size: 1.1rem;
+  color: var(--pink-dark); padding: 0 0.8rem 0 0.5rem; font-weight: 700;
+}
+
+/* ===== MAIN CONTENT ===== */
+#main { opacity: 0; transition: opacity 0.8s ease; }
+#main.visible { opacity: 1; }
+section { min-height: 80vh; padding: 5rem 1.5rem; position: relative; }
+.section-inner { max-width: 1100px; margin: 0 auto; }
+
+/* ===== SECTION LABELS ===== */
+.section-tag {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  background: linear-gradient(135deg, var(--pink-light), var(--lavender-light));
+  border: 1px solid rgba(249,168,196,0.4); border-radius: 999px;
+  padding: 0.4rem 1rem; font-size: 0.8rem; font-weight: 700;
+  color: var(--purple); letter-spacing: 1px; text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+.section-title {
+  font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3.5rem);
+  color: var(--dark2); line-height: 1.2; margin-bottom: 1rem;
+}
+.section-title em { font-style: italic; color: var(--pink-dark); }
+.section-sub { color: var(--text-soft); font-size: 1.05rem; line-height: 1.8; max-width: 600px; }
+
+/* ===== HERO ===== */
+#hero {
+  min-height: 100vh; display: flex; align-items: center; justify-content: center;
+  text-align: center; padding: 6rem 1.5rem; overflow: hidden;
+}
+.hero-bg-hearts { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+.hero-heart { position: absolute; font-size: 1.2rem; animation: heroHeart linear infinite; opacity: 0; }
+@keyframes heroHeart {
+  0% { transform: translateY(100%) scale(0.5) rotate(0deg); opacity: 0; }
+  15% { opacity: 0.6; }
+  85% { opacity: 0.3; }
+  100% { transform: translateY(-20%) scale(1) rotate(30deg); opacity: 0; }
+}
+.hero-badge {
+  display: inline-block; background: linear-gradient(135deg, var(--champagne), var(--gold));
+  color: #fff; border-radius: 999px; padding: 0.4rem 1.2rem;
+  font-size: 0.85rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
+  margin-bottom: 1.5rem; box-shadow: 0 4px 20px rgba(201,160,76,0.4);
+  animation: pulse 2s ease-in-out infinite;
+}
+@keyframes pulse { 0%,100%{transform:scale(1)} 50%{transform:scale(1.03)} }
+.hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(3rem, 10vw, 7rem); font-weight: 700;
+  background: linear-gradient(135deg, var(--pink-dark), var(--purple-dark), var(--pink-dark));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  line-height: 1.1; margin-bottom: 1.5rem; background-size: 200% 200%;
+  animation: gradShift 5s ease-in-out infinite alternate;
+}
+@keyframes gradShift { 0%{background-position:0% 50%} 100%{background-position:100% 50%} }
+.hero-sub {
+  font-family: 'Playfair Display', serif; font-style: italic;
+  font-size: clamp(1rem, 3vw, 1.4rem); color: var(--text-soft);
+  max-width: 600px; margin: 0 auto 2.5rem; line-height: 1.8;
+}
+.hero-date-pill {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  background: var(--glass); backdrop-filter: blur(10px);
+  border: 1px solid rgba(249,168,196,0.3); border-radius: 999px;
+  padding: 0.7rem 1.5rem; font-size: 0.95rem; color: var(--text);
+  box-shadow: var(--shadow-soft);
+}
+.hero-scroll {
+  position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%);
+  display: flex; flex-direction: column; align-items: center; gap: 0.4rem;
+  color: var(--text-soft); font-size: 0.8rem;
+}
+.scroll-arrow { width: 2px; height: 40px; background: linear-gradient(var(--pink), transparent); margin: 0 auto; }
+
+/* ===== LOVE LETTER ===== */
+#love-letter { padding: 5rem 1.5rem; }
+.letter-wrapper { max-width: 700px; margin: 0 auto; text-align: center; }
+.envelope-scene {
+  perspective: 1200px; cursor: pointer; display: inline-block;
+  margin-bottom: 3rem; user-select: none;
+}
+.envelope-3d {
+  width: min(380px, 90vw); position: relative;
+  transform-style: preserve-3d; transition: transform 0.6s ease;
+}
+.envelope-3d:hover { transform: rotateX(-5deg) rotateY(5deg) scale(1.03); }
+.envelope-body {
+  width: 100%; aspect-ratio: 5/3.2;
+  background: linear-gradient(150deg, #ffe4ee 0%, #ffd6e8 50%, #fce8f8 100%);
+  border-radius: 12px; position: relative;
+  box-shadow: 0 20px 60px rgba(249,168,196,0.4), 0 8px 30px rgba(155,109,218,0.15);
+  overflow: hidden;
+}
+.envelope-flap {
+  position: absolute; top: 0; left: 0; right: 0; height: 50%;
+  background: linear-gradient(160deg, #f9b8d4 0%, #e8a0c8 100%);
+  clip-path: polygon(0 0, 50% 70%, 100% 0);
+  transform-origin: top center; transition: transform 0.7s cubic-bezier(.4,0,.2,1);
+  z-index: 2;
+}
+.envelope-flap.open { transform: rotateX(180deg); }
+.envelope-lines {
+  position: absolute; bottom: 15%; left: 50%; transform: translateX(-50%);
+  display: flex; flex-direction: column; gap: 6px; width: 55%;
+}
+.envelope-line { height: 2px; background: rgba(249,168,196,0.5); border-radius: 999px; }
+.envelope-seal {
+  position: absolute; top: 45%; left: 50%; transform: translate(-50%, -50%);
+  width: 52px; height: 52px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--pink-dark), var(--purple));
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.4rem; box-shadow: 0 4px 20px rgba(155,109,218,0.4);
+  z-index: 3; transition: transform 0.4s, opacity 0.4s;
+}
+.envelope-seal.open { transform: translate(-50%,-50%) scale(0); opacity: 0; }
+.envelope-hint {
+  display: flex; align-items: center; justify-content: center; gap: 0.5rem;
+  color: var(--text-soft); font-size: 0.9rem; margin-top: 1rem;
+  animation: nudge 2s ease-in-out infinite;
+}
+@keyframes nudge { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-4px)} }
+.letter-paper {
+  max-width: 600px; margin: 0 auto;
+  background: linear-gradient(160deg, #fffaf8 0%, #fff9fc 100%);
+  border-radius: var(--radius); padding: 3rem 2.5rem;
+  box-shadow: var(--shadow-card);
+  border: 1px solid rgba(249,168,196,0.2);
+  display: none; text-align: left; position: relative; overflow: hidden;
+}
+.letter-paper::before {
+  content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
+  background: radial-gradient(ellipse at 30% 20%, rgba(249,168,196,0.08) 0%, transparent 60%);
+  pointer-events: none;
+}
+.letter-paper.open { display: block; animation: letterReveal 0.8s ease forwards; }
+@keyframes letterReveal {
+  0% { opacity: 0; transform: translateY(20px) scale(0.98); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+.letter-header {
+  font-family: 'Dancing Script', cursive; font-size: 1.6rem;
+  color: var(--pink-dark); margin-bottom: 1.5rem; text-align: center;
+}
+.letter-date {
+  font-size: 0.85rem; color: var(--text-soft); text-align: right; margin-bottom: 2rem;
+  font-style: italic;
+}
+.letter-body {
+  font-family: 'Playfair Display', serif; font-size: 1.05rem;
+  color: var(--text); line-height: 2; font-style: italic;
+}
+.letter-body p { margin-bottom: 1.4rem; }
+.letter-sig {
+  font-family: 'Dancing Script', cursive; font-size: 1.8rem;
+  color: var(--pink-dark); text-align: right; margin-top: 2rem;
+}
+.letter-decoration { position: absolute; font-size: 3rem; opacity: 0.07; }
+.letter-decoration:nth-child(1) { top: 10px; right: 20px; transform: rotate(20deg); }
+.letter-decoration:nth-child(2) { bottom: 10px; left: 20px; transform: rotate(-20deg); }
+
+/* ===== STORY TIMELINE ===== */
+#story { padding: 5rem 1.5rem; }
+.timeline { position: relative; padding-left: 40px; max-width: 700px; margin: 3rem auto 0; }
+.timeline::before {
+  content: ''; position: absolute; left: 16px; top: 0; bottom: 0; width: 2px;
+  background: linear-gradient(var(--pink), var(--lavender), var(--purple));
+  border-radius: 999px;
+}
+.timeline-item {
+  position: relative; margin-bottom: 3rem; opacity: 0;
+  transform: translateX(-20px); transition: all 0.6s ease;
+}
+.timeline-item.revealed { opacity: 1; transform: translateX(0); }
+.timeline-dot {
+  position: absolute; left: -32px; top: 6px; width: 18px; height: 18px;
+  border-radius: 50%; background: linear-gradient(var(--pink), var(--lavender));
+  box-shadow: 0 0 0 4px var(--pink-light), 0 0 12px rgba(249,168,196,0.5);
+  display: flex; align-items: center; justify-content: center; font-size: 0.6rem;
+}
+.timeline-card {
+  background: var(--glass); backdrop-filter: blur(10px);
+  border: 1px solid rgba(249,168,196,0.25); border-radius: var(--radius);
+  padding: 1.5rem; box-shadow: var(--shadow-card);
+}
+.timeline-emoji { font-size: 1.5rem; margin-bottom: 0.5rem; }
+.timeline-title { font-family: 'Playfair Display', serif; font-size: 1.15rem; color: var(--dark2); margin-bottom: 0.4rem; }
+.timeline-text { color: var(--text-soft); font-size: 0.95rem; line-height: 1.7; }
+
+/* ===== GALLERY ===== */
+#gallery { padding: 5rem 1.5rem; }
+.gallery-container {
+  position: relative; max-width: 800px; margin: 2rem auto 0;
+  border-radius: var(--radius-lg); overflow: hidden;
+  box-shadow: 0 20px 60px rgba(74,37,53,0.15);
+}
+.gallery-track { display: flex; transition: transform 0.5s cubic-bezier(.4,0,.2,1); cursor: grab; }
+.gallery-track:active { cursor: grabbing; }
+.gallery-slide {
+  min-width: 100%; aspect-ratio: 16/9; position: relative;
+  background: linear-gradient(135deg, var(--pink-light), var(--lavender-light));
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.gallery-photo-placeholder {
+  width: 100%; height: 100%; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 1rem; padding: 2rem;
+}
+.gallery-icon { font-size: 4rem; opacity: 0.5; }
+.gallery-caption {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  background: linear-gradient(transparent, rgba(42,16,32,0.8));
+  padding: 2rem 1.5rem 1.5rem; color: #fff;
+  font-family: 'Playfair Display', serif; font-style: italic;
+}
+.gallery-caption p { font-size: 0.9rem; opacity: 0.85; }
+.gallery-nav-btn {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  width: 44px; height: 44px; border-radius: 50%; background: var(--glass);
+  backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.3);
+  cursor: pointer; font-size: 1.2rem; display: flex; align-items: center;
+  justify-content: center; transition: all 0.3s; z-index: 10;
+}
+.gallery-nav-btn:hover { background: var(--pink); color: #fff; transform: translateY(-50%) scale(1.1); }
+.gallery-prev { left: 1rem; }
+.gallery-next { right: 1rem; }
+.gallery-dots { display: flex; justify-content: center; gap: 8px; margin-top: 1.5rem; }
+.gallery-dot { width: 8px; height: 8px; border-radius: 999px; background: var(--pink-light); cursor: pointer; transition: all 0.3s; }
+.gallery-dot.active { background: var(--pink-dark); width: 24px; }
+
+/* ===== LOVE COUNTER ===== */
+#counter { padding: 5rem 1.5rem; }
+.counter-box {
+  max-width: 800px; margin: 2rem auto;
+  background: linear-gradient(135deg, #1a0828, #2d1040, #1a0520);
+  border-radius: var(--radius-xl); padding: 3.5rem 2rem; text-align: center;
+  box-shadow: 0 30px 80px rgba(42,16,32,0.4), inset 0 0 80px rgba(249,168,196,0.05);
+  position: relative; overflow: hidden;
+}
+.counter-box::before {
+  content: ''; position: absolute; inset: -50%;
+  background: radial-gradient(ellipse at 30% 30%, rgba(249,168,196,0.1) 0%, transparent 60%),
+              radial-gradient(ellipse at 70% 70%, rgba(197,180,236,0.1) 0%, transparent 60%);
+  animation: counterGlow 8s ease-in-out infinite alternate;
+}
+@keyframes counterGlow { 0%{opacity:0.5;transform:rotate(0)} 100%{opacity:1;transform:rotate(5deg)} }
+.counter-title {
+  font-family: 'Dancing Script', cursive; font-size: 1.6rem;
+  color: rgba(255,255,255,0.7); margin-bottom: 2rem; position: relative;
+}
+.counter-numbers {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 1rem; position: relative; margin-bottom: 2rem;
+}
+.counter-unit { text-align: center; }
+.counter-value {
+  display: block; font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 6vw, 4rem); font-weight: 700;
+  background: linear-gradient(135deg, var(--champagne), var(--gold), #fffae8);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text; line-height: 1;
+}
+.counter-label { font-size: 0.75rem; color: rgba(255,255,255,0.5); letter-spacing: 2px; text-transform: uppercase; margin-top: 0.3rem; }
+.counter-divider { color: rgba(249,168,196,0.4); font-size: 2rem; display: flex; align-items: center; }
+.counter-message {
+  font-family: 'Playfair Display', serif; font-style: italic;
+  color: rgba(255,255,255,0.7); font-size: 1.05rem; position: relative;
+}
+
+/* ===== REASONS ===== */
+#reasons { padding: 5rem 1.5rem; }
+.reasons-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem; margin-top: 2.5rem;
+}
+.reason-card {
+  background: var(--glass); backdrop-filter: blur(12px);
+  border: 1px solid rgba(249,168,196,0.2); border-radius: var(--radius);
+  padding: 1.5rem; cursor: pointer; transition: all 0.3s ease;
+  position: relative; overflow: hidden;
+}
+.reason-card::before {
+  content: ''; position: absolute; inset: 0; opacity: 0; transition: opacity 0.3s;
+  background: linear-gradient(135deg, rgba(249,168,196,0.1), rgba(197,180,236,0.1));
+}
+.reason-card:hover { transform: translateY(-6px) scale(1.02); box-shadow: var(--shadow-pink); }
+.reason-card:hover::before { opacity: 1; }
+.reason-number {
+  font-family: 'Playfair Display', serif; font-size: 0.75rem; font-weight: 700;
+  color: var(--pink); letter-spacing: 2px; margin-bottom: 0.5rem; opacity: 0.6;
+}
+.reason-emoji { font-size: 1.6rem; margin-bottom: 0.5rem; display: block; }
+.reason-text { font-size: 0.9rem; color: var(--text); line-height: 1.6; }
+
+/* ===== JAR OF MEMORIES ===== */
+#jar { padding: 5rem 1.5rem; text-align: center; }
+.jar-container { max-width: 500px; margin: 3rem auto; position: relative; }
+.jar-svg-wrapper {
+  width: 220px; margin: 0 auto 2rem; cursor: pointer; transition: transform 0.3s;
+  filter: drop-shadow(0 20px 40px rgba(249,168,196,0.3));
+}
+.jar-svg-wrapper:hover { transform: scale(1.05) rotate(-3deg); }
+.jar-count {
+  font-family: 'Playfair Display', serif; font-size: 1.1rem;
+  color: var(--text-soft); margin-bottom: 1.5rem;
+}
+.jar-btn {
+  background: linear-gradient(135deg, var(--pink), var(--lavender));
+  border: none; border-radius: 999px; padding: 0.9rem 2.2rem;
+  color: #fff; font-family: 'Nunito', sans-serif; font-size: 1rem; font-weight: 700;
+  cursor: pointer; box-shadow: var(--shadow-pink); transition: all 0.3s;
+}
+.jar-btn:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(249,168,196,0.5); }
+.memory-popup {
+  position: fixed; inset: 0; z-index: 5000; display: none;
+  align-items: center; justify-content: center; padding: 2rem;
+  background: rgba(42,16,32,0.6); backdrop-filter: blur(8px);
+}
+.memory-popup.active { display: flex; }
+.memory-note {
+  background: linear-gradient(150deg, #fff8e8, #fff3f0);
+  border-radius: var(--radius); padding: 2.5rem 2rem; max-width: 420px; width: 100%;
+  position: relative; box-shadow: 0 30px 80px rgba(42,16,32,0.3);
+  animation: noteReveal 0.4s cubic-bezier(.34,1.56,.64,1);
+  border: 1px solid rgba(249,168,196,0.3);
+}
+@keyframes noteReveal {
+  0% { transform: scale(0.8) rotate(-5deg); opacity: 0; }
+  100% { transform: scale(1) rotate(0deg); opacity: 1; }
+}
+.memory-note-icon { font-size: 2rem; margin-bottom: 1rem; }
+.memory-note-text { font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.05rem; color: var(--text); line-height: 1.8; margin-bottom: 1.5rem; }
+.memory-close {
+  width: 100%; background: linear-gradient(135deg, var(--pink), var(--lavender));
+  border: none; border-radius: 999px; padding: 0.8rem; color: #fff;
+  font-family: 'Nunito', sans-serif; font-weight: 700; cursor: pointer; font-size: 0.95rem;
+}
+.memory-note-num { position: absolute; top: 1rem; right: 1.2rem; font-size: 0.75rem; color: var(--text-soft); }
+
+/* ===== QUIZ ===== */
+#quiz { padding: 5rem 1.5rem; }
+.quiz-card {
+  max-width: 650px; margin: 2.5rem auto;
+  background: var(--glass); backdrop-filter: blur(12px);
+  border: 1px solid rgba(249,168,196,0.25); border-radius: var(--radius-lg);
+  padding: 2.5rem; box-shadow: var(--shadow-card);
+}
+.quiz-progress { height: 4px; background: var(--pink-light); border-radius: 999px; margin-bottom: 2rem; overflow: hidden; }
+.quiz-progress-bar { height: 100%; background: linear-gradient(90deg, var(--pink), var(--lavender)); border-radius: 999px; transition: width 0.4s ease; }
+.quiz-q-num { font-size: 0.8rem; color: var(--text-soft); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 1rem; }
+.quiz-question { font-family: 'Playfair Display', serif; font-size: 1.3rem; color: var(--dark2); margin-bottom: 2rem; line-height: 1.5; }
+.quiz-options { display: flex; flex-direction: column; gap: 0.75rem; }
+.quiz-option {
+  background: var(--warm-white); border: 2px solid rgba(249,168,196,0.25);
+  border-radius: var(--radius); padding: 1rem 1.3rem; cursor: pointer;
+  font-size: 0.95rem; color: var(--text); transition: all 0.25s; text-align: left;
+  display: flex; align-items: center; gap: 0.75rem;
+}
+.quiz-option:hover { border-color: var(--pink); background: var(--pink-light); transform: translateX(4px); }
+.quiz-option.selected { border-color: var(--purple); background: var(--lavender-light); }
+.quiz-option.correct { border-color: var(--pink-dark); background: var(--pink-light); }
+.quiz-option-icon { font-size: 1.2rem; min-width: 1.5rem; }
+.quiz-result {
+  text-align: center; display: none; padding: 1rem 0;
+  animation: resultReveal 0.5s ease;
+}
+@keyframes resultReveal { 0%{opacity:0;transform:scale(0.95)} 100%{opacity:1;transform:scale(1)} }
+.quiz-result-emoji { font-size: 3rem; margin-bottom: 1rem; }
+.quiz-result-title { font-family: 'Playfair Display', serif; font-size: 1.6rem; color: var(--dark2); margin-bottom: 0.5rem; }
+.quiz-result-text { color: var(--text-soft); margin-bottom: 1.5rem; }
+.quiz-next-btn, .quiz-restart-btn {
+  background: linear-gradient(135deg, var(--pink-dark), var(--purple));
+  border: none; border-radius: 999px; padding: 0.85rem 2rem;
+  color: #fff; font-family: 'Nunito', sans-serif; font-weight: 700;
+  cursor: pointer; font-size: 0.95rem; transition: all 0.3s;
+}
+.quiz-next-btn:hover, .quiz-restart-btn:hover { transform: translateY(-2px); box-shadow: var(--shadow-pink); }
+
+/* ===== GAME ===== */
+#game { padding: 5rem 1.5rem; }
+.game-box { max-width: 550px; margin: 2.5rem auto; text-align: center; }
+#heart-canvas {
+  border-radius: var(--radius-lg); display: block; margin: 1.5rem auto;
+  box-shadow: var(--shadow-card); touch-action: none; cursor: crosshair;
+  max-width: 100%;
+}
+.game-stats {
+  display: flex; justify-content: center; gap: 2rem; margin-bottom: 1rem;
+  font-size: 0.9rem; color: var(--text-soft);
+}
+.game-stat-val {
+  font-family: 'Playfair Display', serif; font-size: 1.4rem;
+  color: var(--pink-dark); font-weight: 700;
+}
+.game-btn {
+  background: linear-gradient(135deg, var(--pink-dark), var(--purple));
+  border: none; border-radius: 999px; padding: 0.85rem 2.2rem;
+  color: #fff; font-family: 'Nunito', sans-serif; font-weight: 700;
+  cursor: pointer; font-size: 1rem; transition: all 0.3s; margin-top: 0.5rem;
+}
+.game-btn:hover { transform: translateY(-2px); box-shadow: var(--shadow-pink); }
+.game-msg { font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.05rem; color: var(--text-soft); margin-top: 1rem; min-height: 2rem; }
+
+/* ===== BIRTHDAY ===== */
+#birthday { padding: 5rem 1.5rem; text-align: center; }
+.birthday-box {
+  max-width: 650px; margin: 2rem auto;
+  background: linear-gradient(135deg, #fff0f7, #f5eeff);
+  border: 2px solid rgba(249,168,196,0.3); border-radius: var(--radius-xl);
+  padding: 3.5rem 2rem; position: relative; overflow: hidden;
+}
+.birthday-box::before {
+  content: '🎂'; position: absolute; font-size: 15rem; opacity: 0.04;
+  top: 50%; left: 50%; transform: translate(-50%, -50%);
+}
+.birthday-emoji { font-size: 4rem; margin-bottom: 1rem; animation: bounceEmoji 1s ease-in-out infinite alternate; }
+@keyframes bounceEmoji { 0%{transform:translateY(0)} 100%{transform:translateY(-10px)} }
+.birthday-title { font-family: 'Dancing Script', cursive; font-size: clamp(2rem,6vw,3.5rem); color: var(--pink-dark); margin-bottom: 0.5rem; }
+.birthday-text { font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.1rem; color: var(--text); line-height: 1.8; max-width: 450px; margin: 0 auto; }
+
+/* ===== MUSIC PLAYER ===== */
+#music-player {
+  position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 900;
+  opacity: 0; transform: translateY(20px); transition: all 0.5s;
+}
+#music-player.visible { opacity: 1; transform: translateY(0); }
+.music-collapsed {
+  width: 56px; height: 56px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--pink-dark), var(--purple));
+  box-shadow: 0 8px 30px rgba(249,168,196,0.5); cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.5rem; transition: transform 0.3s;
+  animation: playerPulse 2s ease-in-out infinite;
+}
+@keyframes playerPulse { 0%,100%{box-shadow:0 8px 30px rgba(249,168,196,0.5)} 50%{box-shadow:0 12px 40px rgba(249,168,196,0.7)} }
+.music-collapsed:hover { transform: scale(1.1); }
+.music-expanded {
+  background: var(--glass); backdrop-filter: blur(20px);
+  border: 1px solid rgba(249,168,196,0.25); border-radius: var(--radius-lg);
+  padding: 1.2rem; width: 240px;
+  box-shadow: 0 20px 60px rgba(42,16,32,0.2); display: none;
+}
+.music-expanded.open { display: block; }
+.music-disc {
+  width: 70px; height: 70px; border-radius: 50%; margin: 0 auto 0.8rem;
+  background: radial-gradient(circle at 35%, #ffd6e8, #c9856a, #281320);
+  box-shadow: 0 4px 20px rgba(201,133,106,0.4); position: relative;
+  display: flex; align-items: center; justify-content: center;
+}
+.music-disc.playing { animation: spin 4s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.music-disc-center { width: 18px; height: 18px; border-radius: 50%; background: #fff9fc; position: absolute; }
+.music-title { text-align: center; font-size: 0.8rem; color: var(--text); font-weight: 600; margin-bottom: 0.3rem; }
+.music-artist { text-align: center; font-size: 0.72rem; color: var(--text-soft); margin-bottom: 0.8rem; }
+.music-progress-bar { height: 3px; background: var(--pink-light); border-radius: 999px; overflow: hidden; margin-bottom: 0.8rem; cursor: pointer; }
+.music-progress-fill { height: 100%; background: linear-gradient(90deg, var(--pink), var(--lavender)); width: 0%; transition: width 0.3s; }
+.music-controls { display: flex; align-items: center; justify-content: center; gap: 0.8rem; }
+.music-btn { background: none; border: none; font-size: 1.1rem; cursor: pointer; color: var(--text); transition: transform 0.2s; padding: 0.3rem; }
+.music-btn:hover { transform: scale(1.2); color: var(--pink-dark); }
+.music-play-btn { font-size: 1.6rem; color: var(--pink-dark); }
+.music-note-msg { font-size: 0.7rem; color: var(--text-soft); text-align: center; margin-top: 0.6rem; font-style: italic; }
+
+/* ===== LOVE MESSAGES ===== */
+#messages { padding: 5rem 1.5rem; text-align: center; }
+.message-display {
+  max-width: 600px; margin: 2rem auto;
+  background: var(--glass); backdrop-filter: blur(12px);
+  border: 1px solid rgba(249,168,196,0.25); border-radius: var(--radius-xl);
+  padding: 3rem 2rem; min-height: 180px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  box-shadow: var(--shadow-card);
+}
+.message-text {
+  font-family: 'Playfair Display', serif; font-style: italic;
+  font-size: clamp(1rem, 3vw, 1.3rem); color: var(--dark2); line-height: 1.7;
+  transition: all 0.4s ease; text-align: center;
+}
+.message-text.fade { opacity: 0; transform: translateY(10px); }
+.message-count { font-size: 0.8rem; color: var(--text-soft); margin-top: 1rem; }
+.msg-btn {
+  margin-top: 1.5rem; background: linear-gradient(135deg, var(--pink-dark), var(--purple));
+  border: none; border-radius: 999px; padding: 1rem 2.5rem;
+  color: #fff; font-family: 'Nunito', sans-serif; font-weight: 700;
+  font-size: 1.05rem; cursor: pointer; box-shadow: var(--shadow-pink);
+  transition: all 0.3s; display: flex; align-items: center; gap: 0.5rem; margin: 1.5rem auto 0;
+}
+.msg-btn:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(249,168,196,0.5); }
+
+/* ===== WALL OF REASONS ===== */
+#wall { padding: 5rem 1.5rem; }
+.sticky-wall {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1.2rem; margin-top: 2.5rem; max-width: 1000px; margin-left: auto; margin-right: auto;
+}
+.sticky-note {
+  border-radius: 4px; padding: 1.2rem;
+  font-family: 'Dancing Script', cursive; font-size: 1rem; line-height: 1.5;
+  box-shadow: 4px 4px 20px rgba(74,37,53,0.12);
+  cursor: pointer; transition: all 0.3s;
+  position: relative; min-height: 120px; display: flex; align-items: flex-start;
+}
+.sticky-note:hover { transform: rotate(0deg) scale(1.05) translateY(-4px); box-shadow: 8px 8px 30px rgba(74,37,53,0.2); z-index: 10; }
+.sticky-pin { position: absolute; top: -8px; left: 50%; transform: translateX(-50%); font-size: 1.1rem; }
+
+/* ===== LOVE METER ===== */
+#love-meter { padding: 5rem 1.5rem; text-align: center; }
+.meter-container { max-width: 500px; margin: 2.5rem auto; }
+.meter-bar-outer {
+  height: 24px; background: var(--pink-light); border-radius: 999px;
+  overflow: hidden; position: relative; box-shadow: inset 0 2px 8px rgba(74,37,53,0.1);
+  margin-bottom: 1.5rem;
+}
+.meter-bar-inner {
+  height: 100%; width: 0; border-radius: 999px;
+  background: linear-gradient(90deg, var(--pink), var(--lavender), var(--purple));
+  transition: width 0.6s ease; position: relative;
+}
+.meter-bar-glow { position: absolute; inset: 0; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4)); }
+.meter-value { font-family: 'Playfair Display', serif; font-size: 3rem; color: var(--pink-dark); font-weight: 700; min-height: 3.5rem; }
+.meter-label { font-size: 0.9rem; color: var(--text-soft); margin-bottom: 0.5rem; }
+.meter-msg { font-family: 'Playfair Display', serif; font-style: italic; color: var(--text); font-size: 1.1rem; min-height: 2rem; }
+.meter-btn {
+  background: linear-gradient(135deg, var(--pink-dark), var(--purple));
+  border: none; border-radius: 999px; padding: 0.85rem 2.2rem;
+  color: #fff; font-family: 'Nunito', sans-serif; font-weight: 700;
+  cursor: pointer; font-size: 0.95rem; transition: all 0.3s; margin-top: 1.5rem;
+}
+.meter-btn:hover { transform: translateY(-2px); box-shadow: var(--shadow-pink); }
+
+/* ===== EASTER EGG OVERLAY ===== */
+#easter-egg-overlay {
+  position: fixed; inset: 0; z-index: 8000;
+  display: none; align-items: center; justify-content: center;
+  background: rgba(42,16,32,0.85); backdrop-filter: blur(12px);
+  flex-direction: column; gap: 1rem;
+}
+#easter-egg-overlay.active { display: flex; animation: overlayReveal 0.4s ease; }
+@keyframes overlayReveal { 0%{opacity:0} 100%{opacity:1} }
+.easter-popup {
+  background: linear-gradient(135deg, #ffe4ee, #f5eeff);
+  border-radius: var(--radius-xl); padding: 3rem 2.5rem;
+  max-width: 420px; width: 90%; text-align: center;
+  box-shadow: 0 30px 80px rgba(42,16,32,0.4);
+  animation: easterReveal 0.5s cubic-bezier(.34,1.56,.64,1);
+}
+@keyframes easterReveal { 0%{transform:scale(0.5) rotate(-10deg);opacity:0} 100%{transform:scale(1) rotate(0deg);opacity:1} }
+.easter-icon { font-size: 4rem; display: block; margin-bottom: 1rem; }
+.easter-title { font-family: 'Dancing Script', cursive; font-size: 2.5rem; color: var(--pink-dark); margin-bottom: 0.5rem; }
+.easter-text { font-family: 'Playfair Display', serif; font-style: italic; color: var(--text); line-height: 1.7; margin-bottom: 1.5rem; }
+.easter-close {
+  background: linear-gradient(135deg, var(--pink-dark), var(--purple));
+  border: none; border-radius: 999px; padding: 0.8rem 2rem;
+  color: #fff; font-family: 'Nunito', sans-serif; font-weight: 700; cursor: pointer;
+}
+#easter-hint {
+  position: fixed; bottom: 6rem; left: 50%; transform: translateX(-50%);
+  font-size: 0.75rem; color: rgba(255,255,255,0.3);
+  pointer-events: none; z-index: 800; white-space: nowrap;
+  opacity: 0; transition: opacity 0.5s;
+}
+#easter-hint.visible { opacity: 1; }
+#easter-key-display {
+  position: fixed; top: 5rem; right: 1rem; z-index: 800;
+  font-size: 0.7rem; color: rgba(74,37,53,0.3);
+  letter-spacing: 2px; text-transform: uppercase;
+  font-family: monospace; opacity: 0; transition: opacity 0.3s;
+}
+
+/* ===== FINAL ENDING ===== */
+#ending {
+  min-height: 100vh; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; text-align: center;
+  padding: 5rem 1.5rem; position: relative; overflow: hidden;
+}
+.ending-glow {
+  position: absolute; inset: 0; pointer-events: none;
+  background: radial-gradient(ellipse at center, rgba(249,168,196,0.15) 0%, transparent 70%);
+  animation: endingGlow 4s ease-in-out infinite alternate;
+}
+@keyframes endingGlow { 0%{opacity:0.5;transform:scale(0.9)} 100%{opacity:1;transform:scale(1.1)} }
+.ending-pre { font-size: 0.9rem; color: var(--text-soft); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 2rem; }
+.ending-title {
+  font-family: 'Playfair Display', serif; font-size: clamp(2.2rem, 7vw, 5rem);
+  color: var(--dark2); line-height: 1.2; margin-bottom: 1rem;
+}
+.ending-title em { color: var(--pink-dark); font-style: italic; }
+.ending-lines { font-family: 'Playfair Display', serif; font-style: italic; font-size: clamp(1rem, 2.5vw, 1.3rem); color: var(--text-soft); margin: 2rem 0; line-height: 2.4; }
+.ending-typed {
+  font-family: 'Dancing Script', cursive; font-size: clamp(1.4rem, 4vw, 2.2rem);
+  color: var(--pink-dark); margin: 1.5rem 0 3rem; min-height: 2.5em;
+}
+.hug-btn {
+  background: linear-gradient(135deg, var(--pink), var(--lavender), var(--purple));
+  border: none; border-radius: 999px; padding: 1.2rem 3rem;
+  color: #fff; font-family: 'Nunito', sans-serif; font-weight: 700;
+  font-size: 1.15rem; cursor: pointer; box-shadow: 0 12px 40px rgba(249,168,196,0.5);
+  transition: all 0.3s; background-size: 200% 200%; animation: gradShift 3s ease-in-out infinite alternate;
+}
+.hug-btn:hover { transform: scale(1.06) translateY(-3px); box-shadow: 0 20px 60px rgba(249,168,196,0.7); }
+.ending-footer {
+  margin-top: 5rem; font-family: 'Dancing Script', cursive;
+  font-size: 1.2rem; color: var(--text-soft);
+}
+
+/* ===== CONFETTI CANVAS ===== */
+#confetti-canvas {
+  position: fixed; inset: 0; z-index: 7000; pointer-events: none;
+  display: none;
+}
+
+/* ===== HUG OVERLAY ===== */
+#hug-overlay {
+  position: fixed; inset: 0; z-index: 8000; display: none;
+  background: rgba(42,16,32,0.6); backdrop-filter: blur(8px);
+  align-items: center; justify-content: center; flex-direction: column;
+}
+#hug-overlay.active { display: flex; animation: overlayReveal 0.4s ease; }
+#hug-overlay canvas { position: absolute; inset: 0; pointer-events: none; }
+.hug-card {
+  background: linear-gradient(150deg, #fff0f7, #f5eeff);
+  border-radius: var(--radius-xl); padding: 3rem 2.5rem; max-width: 420px;
+  width: 90%; text-align: center; position: relative; z-index: 10;
+  box-shadow: 0 30px 80px rgba(42,16,32,0.4);
+  animation: easterReveal 0.5s cubic-bezier(.34,1.56,.64,1);
+}
+.hug-card-icon { font-size: 5rem; display: block; margin-bottom: 1rem; animation: hugBounce 0.5s ease-in-out infinite alternate; }
+@keyframes hugBounce { 0%{transform:scale(1)} 100%{transform:scale(1.1)} }
+.hug-card-title { font-family: 'Dancing Script', cursive; font-size: 2.5rem; color: var(--pink-dark); margin-bottom: 0.5rem; }
+.hug-card-text { font-family: 'Playfair Display', serif; font-style: italic; color: var(--text); line-height: 1.7; margin-bottom: 1.5rem; }
+.hug-close { background: linear-gradient(135deg, var(--pink-dark), var(--purple)); border: none; border-radius: 999px; padding: 0.8rem 2rem; color: #fff; font-family: 'Nunito', sans-serif; font-weight: 700; cursor: pointer; }
+
+/* ===== REVEAL ANIMATIONS ===== */
+.reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.reveal.revealed { opacity: 1; transform: translateY(0); }
+.reveal-left { opacity: 0; transform: translateX(-30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.reveal-left.revealed { opacity: 1; transform: translateX(0); }
+.reveal-right { opacity: 0; transform: translateX(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.reveal-right.revealed { opacity: 1; transform: translateX(0); }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .counter-numbers { grid-template-columns: repeat(2, 1fr); }
+  .counter-divider { display: none; }
+  .reasons-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
+  .sticky-wall { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); }
+  .letter-paper { padding: 2rem 1.5rem; }
+  .music-expanded { width: 200px; }
+  #nav { display: none; }
+}
+@media (max-width: 480px) {
+  section { padding: 4rem 1rem; }
+  .counter-numbers { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ===== UTILITIES ===== */
+.text-center { text-align: center; }
+.mt-1 { margin-top: 1rem; }
+.mt-2 { margin-top: 2rem; }
+.flex-center { display: flex; align-items: center; justify-content: center; }
+.shimmer {
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  background-size: 200% 100%; animation: shimmer 2s infinite;
+}
+@keyframes shimmer { 0%{background-position:-200% 0} 100%{background-position:200% 0} }
+
+/* Light burst transition */
+#light-burst {
+  position: fixed; inset: 0; z-index: 10000;
+  background: radial-gradient(circle at center, #fff9fc, var(--pink-light), transparent);
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+#light-burst.flash { opacity: 1; }
+</style>
+</head>
+<body>
+
+<!-- AURORA BACKGROUND -->
+<div class="aurora-bg"></div>
+
+<!-- LIGHT BURST TRANSITION -->
+<div id="light-burst"></div>
+
+<!-- CONFETTI CANVAS -->
+<canvas id="confetti-canvas"></canvas>
+
+<!-- ============================
+     SPLASH SCREEN
+============================ -->
+<div id="splash">
+  <canvas id="splash-canvas"></canvas>
+  <div class="splash-hearts" id="splash-hearts"></div>
+  <div class="splash-content">
+    <div class="splash-moon"></div>
+    <div class="splash-typed" id="typed-text"><span id="typed-content"></span><span class="cursor"></span></div>
+    <button class="splash-btn" id="splash-btn" onclick="openGift()">Buka Hadiah 🎁</button>
+  </div>
+</div>
+
+<!-- ============================
+     NAV
+============================ -->
+<nav id="nav">
+  <div class="nav-pill">
+    <span class="nav-logo">L❤F</span>
+    <div class="nav-dot" onclick="scrollTo('#hero')" title="Beranda"></div>
+    <div class="nav-dot" onclick="scrollTo('#love-letter')" title="Surat"></div>
+    <div class="nav-dot" onclick="scrollTo('#story')" title="Cerita"></div>
+    <div class="nav-dot" onclick="scrollTo('#gallery')" title="Galeri"></div>
+    <div class="nav-dot" onclick="scrollTo('#counter')" title="Waktu"></div>
+    <div class="nav-dot" onclick="scrollTo('#reasons')" title="Alasan"></div>
+    <div class="nav-dot" onclick="scrollTo('#jar')" title="Kenangan"></div>
+    <div class="nav-dot" onclick="scrollTo('#quiz')" title="Quiz"></div>
+    <div class="nav-dot" onclick="scrollTo('#game')" title="Game"></div>
+    <div class="nav-dot" onclick="scrollTo('#messages')" title="Pesan"></div>
+    <div class="nav-dot" onclick="scrollTo('#ending')" title="Akhir"></div>
+  </div>
+</nav>
+
+<!-- ============================
+     MAIN CONTENT
+============================ -->
+<div id="main">
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg-hearts" id="hero-hearts"></div>
+  <div class="section-inner" style="position:relative;z-index:1;">
+    <div class="hero-badge reveal">✦ Spesial Untuk Frall ✦</div>
+    <h1 class="hero-title reveal">Untuk Frall ❤️</h1>
+    <p class="hero-sub reveal">"Dari semua kemungkinan yang ada di internet,<br>aku bersyukur semesta mempertemukanku denganmu."</p>
+    <div class="hero-date-pill reveal">
+      <span>❤️</span>
+      <span>Dari Liam, dengan sepenuh hati</span>
+      <span>❤️</span>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <div class="scroll-arrow"></div>
+    <span style="font-size:0.75rem;color:var(--text-soft)">scroll</span>
+  </div>
+</section>
+
+<!-- LOVE LETTER -->
+<section id="love-letter">
+  <div class="section-inner">
+    <div class="letter-wrapper">
+      <div class="section-tag reveal">💌 Love Letter</div>
+      <h2 class="section-title reveal">Surat <em>Untukmu</em></h2>
+      <p class="section-sub reveal" style="margin:0 auto 2.5rem;text-align:center;">Klik amplop di bawah ini untuk membuka surat dari Liam ❤️</p>
+
+      <div class="envelope-scene reveal" onclick="openEnvelope()">
+        <div class="envelope-3d" id="envelope">
+          <div class="envelope-body">
+            <div class="envelope-flap" id="env-flap"></div>
+            <div style="position:absolute;bottom:20%;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;gap:6px;width:55%;">
+              <div class="envelope-line"></div>
+              <div class="envelope-line"></div>
+              <div class="envelope-line"></div>
+            </div>
+            <div class="envelope-seal" id="env-seal">❤️</div>
+          </div>
+        </div>
+        <div class="envelope-hint">
+          <span>✨</span> <span>Klik untuk membuka</span> <span>✨</span>
+        </div>
+      </div>
+
+      <div class="letter-paper" id="letter-paper">
+        <div class="letter-decoration">🌸</div>
+        <div class="letter-decoration">🌹</div>
+        <div class="letter-date" id="letter-date"></div>
+        <div class="letter-header">Frall yang aku sayang,</div>
+        <div class="letter-body">
+          <p>Aku tidak pernah menyangka bahwa dari sekian milyar manusia yang ada di dunia ini — yang masing-masing sibuk dengan hidupnya sendiri — semesta akan cukup baik hati untuk mempertemukanku denganmu. Secara virtual, ya. Tapi nyata. Sangat, sangat nyata.</p>
+          <p>Kamu tahu yang paling aku suka dari kamu, Frall? Cara kamu hadir. Bukan hadir secara fisik, tapi hadir sepenuhnya saat kita ngobrol. Saat aku cerita hal yang bahkan aku sendiri nggak yakin penting, kamu dengerin. Kamu nanya. Kamu peduli. Dan itu lebih berharga dari yang bisa aku ungkapkan dengan kata-kata.</p>
+          <p>Ada hari-hari ketika aku merasa dunia terlalu bising, terlalu berat, terlalu banyak. Dan kemudian kamu muncul — satu notif kecil, satu "hai, lagi apa?" — dan entah bagaimana segalanya terasa lebih ringan. Bukan karena masalahnya hilang, tapi karena aku tahu ada kamu di sana.</p>
+          <p>Aku suka cara kamu tertawa. Aku suka cara kamu excited soal hal-hal yang kamu suka. Aku suka saat kamu jahil. Aku suka saat kamu serius. Aku suka semua versi kamu yang pernah kamu tunjukkan padaku — bahkan yang rapuh, bahkan yang lelah, bahkan yang nggak sempurna.</p>
+          <p>Frall, kamu mengajariku banyak hal tanpa kamu sadari. Kamu mengajariku tentang kehadiran yang tulus. Tentang perhatian yang nggak butuh alasan. Tentang bagaimana jarak — sejauh apapun — bisa terasa seperti tidak ada saat dua hati benar-benar terhubung.</p>
+          <p>Aku tidak tahu apa yang akan terjadi ke depannya. Hidup tidak pernah mau memberikan jaminan kepada siapapun. Tapi satu hal yang aku tahu pasti: setiap detik yang aku habiskan bersamamu — meski hanya lewat layar, meski hanya lewat kata-kata — adalah detik yang paling aku syukuri dalam hidupku.</p>
+          <p>Website ini aku buat bukan karena aku harus, tapi karena aku <em>ingin</em>. Karena kamu layak mendapatkan sesuatu yang lebih dari sekadar "aku sayang kamu". Kamu layak mendapatkan sesuatu yang bisa kamu lihat, rasakan, dan simpan. Sebuah dunia kecil yang aku buat khusus untukmu.</p>
+          <p>Terima kasih sudah memilihku di antara semua orang yang ada. Terima kasih sudah menjadi kamu. Terima kasih sudah membuat hariku lebih berwarna, lebih hangat, lebih berarti.</p>
+          <p style="margin-bottom:0;">Ini untukmu, Frall. Sepenuhnya, setulus-tulusnya.</p>
+        </div>
+        <div class="letter-sig">
+          Dengan seluruh hati, Liam ❤️
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STORY -->
+<section id="story">
+  <div class="section-inner">
+    <div class="section-tag reveal">✨ Our Journey</div>
+    <h2 class="section-title reveal">Cerita <em>Kita</em></h2>
+    <p class="section-sub reveal">Setiap perjalanan punya momen-momen yang nggak terlupakan. Ini adalah beberapa milik kita.</p>
+    <div class="timeline" id="timeline"></div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="section-inner">
+    <div class="section-tag reveal">📸 Gallery</div>
+    <h2 class="section-title reveal">Kenangan <em>Kita</em></h2>
+    <p class="section-sub reveal">Tempat untuk semua momen berharga — tambahkan foto-fotomu di CONFIG.</p>
+    <div class="gallery-container reveal" id="gallery-container">
+      <div class="gallery-track" id="gallery-track"></div>
+      <button class="gallery-nav-btn gallery-prev" onclick="galleryPrev()">‹</button>
+      <button class="gallery-nav-btn gallery-next" onclick="galleryNext()">›</button>
+    </div>
+    <div class="gallery-dots" id="gallery-dots"></div>
+  </div>
+</section>
+
+<!-- LOVE COUNTER -->
+<section id="counter">
+  <div class="section-inner">
+    <div class="section-tag reveal text-center" style="justify-content:center;display:flex;">⏳ Love Timer</div>
+    <h2 class="section-title reveal text-center">Sudah Berapa Lama <em>Kita</em>?</h2>
+    <div class="counter-box reveal">
+      <p class="counter-title">Liam & Frall sudah bersama selama...</p>
+      <div class="counter-numbers" id="counter-display"></div>
+      <p class="counter-message" id="counter-msg">"Setiap detiknya berharga ❤️"</p>
+    </div>
+  </div>
+</section>
+
+<!-- REASONS -->
+<section id="reasons">
+  <div class="section-inner">
+    <div class="section-tag reveal">💖 Why You</div>
+    <h2 class="section-title reveal"><em>35 Alasan</em> Aku Menyayangimu</h2>
+    <p class="section-sub reveal">Ini baru sebagian. Sebenarnya ada terlalu banyak sampai nggak bisa dihitung.</p>
+    <div class="reasons-grid reveal" id="reasons-grid"></div>
+  </div>
+</section>
+
+<!-- JAR -->
+<section id="jar">
+  <div class="section-inner">
+    <div class="section-tag" style="display:inline-flex;justify-content:center;">🫙 Memory Jar</div>
+    <h2 class="section-title reveal">Toples <em>Kenangan</em></h2>
+    <p class="section-sub reveal" style="text-align:center;margin:0 auto;">Di dalam toples ini tersimpan kenangan kecil yang manis. Klik untuk mengambil satu.</p>
+    <div class="jar-container">
+      <div class="jar-svg-wrapper reveal" onclick="pickMemory()">
+        <svg viewBox="0 0 200 280" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="jarGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#fde8f2;stop-opacity:0.9"/>
+              <stop offset="100%" style="stop-color:#f5eeff;stop-opacity:0.9"/>
+            </linearGradient>
+            <linearGradient id="lidGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#f9b8d4"/>
+              <stop offset="100%" style="stop-color:#c5b4ec"/>
+            </linearGradient>
+          </defs>
+          <!-- Lid -->
+          <rect x="45" y="20" width="110" height="28" rx="8" fill="url(#lidGrad)" opacity="0.9"/>
+          <rect x="55" y="10" width="90" height="18" rx="6" fill="url(#lidGrad)"/>
+          <!-- Jar body -->
+          <path d="M55 48 Q40 55 38 80 L32 240 Q31 258 100 260 Q169 258 168 240 L162 80 Q160 55 145 48 Z" fill="url(#jarGrad)" stroke="rgba(249,168,196,0.4)" stroke-width="1.5"/>
+          <!-- Shine -->
+          <path d="M65 70 Q68 160 72 220" stroke="rgba(255,255,255,0.6)" stroke-width="6" fill="none" stroke-linecap="round"/>
+          <!-- Notes inside -->
+          <g opacity="0.7">
+            <rect x="65" y="100" width="40" height="28" rx="3" fill="#ffb3cb" transform="rotate(-12 85 114)"/>
+            <rect x="95" y="120" width="36" height="26" rx="3" fill="#c5b4ec" transform="rotate(8 113 133)"/>
+            <rect x="70" y="145" width="38" height="26" rx="3" fill="#ffd6a5" transform="rotate(-5 89 158)"/>
+            <rect x="100" y="155" width="34" height="24" rx="3" fill="#f9b8d4" transform="rotate(15 117 167)"/>
+            <rect x="68" y="175" width="36" height="25" rx="3" fill="#b8e0ff" transform="rotate(-8 86 188)"/>
+            <rect x="98" y="180" width="36" height="24" rx="3" fill="#c5b4ec" transform="rotate(10 116 192)"/>
+          </g>
+          <!-- Heart label -->
+          <text x="100" y="88" text-anchor="middle" font-size="14" fill="rgba(201,133,106,0.7)">❤️ memories</text>
+        </svg>
+      </div>
+      <p class="jar-count reveal" id="jar-count">75 kenangan tersimpan dengan cinta</p>
+      <button class="jar-btn reveal" onclick="pickMemory()">Ambil Satu Kenangan 🫙</button>
+    </div>
+  </div>
+</section>
+
+<!-- MEMORY POPUP -->
+<div class="memory-popup" id="memory-popup">
+  <div class="memory-note">
+    <span class="memory-note-num" id="memory-num"></span>
+    <div class="memory-note-icon" id="memory-icon">💝</div>
+    <div class="memory-note-text" id="memory-text"></div>
+    <button class="memory-close" onclick="closeMemory()">Simpan kembali 🫙</button>
+  </div>
+</div>
+
+<!-- QUIZ -->
+<section id="quiz">
+  <div class="section-inner">
+    <div class="section-tag reveal">💫 Love Quiz</div>
+    <h2 class="section-title reveal">Quiz <em>Tentang Kita</em></h2>
+    <p class="section-sub reveal">Seberapa baik Frall mengenal Liam? Yuk coba!</p>
+    <div class="quiz-card reveal" id="quiz-card">
+      <div class="quiz-progress"><div class="quiz-progress-bar" id="quiz-bar"></div></div>
+      <div id="quiz-content"></div>
+    </div>
+  </div>
+</section>
+
+<!-- GAME -->
+<section id="game">
+  <div class="section-inner">
+    <div class="section-tag reveal">🎮 Mini Game</div>
+    <h2 class="section-title reveal">Tangkap <em>Hati Liam</em>!</h2>
+    <p class="section-sub reveal">Semua hati yang jatuh itu hati Liam yang dikirim buat Frall. Tangkap sebanyaknya!</p>
+    <div class="game-box reveal">
+      <div class="game-stats">
+        <div><div class="game-stat-val" id="game-score">0</div><div>Skor</div></div>
+        <div><div class="game-stat-val" id="game-combo">x1</div><div>Combo</div></div>
+        <div><div class="game-stat-val" id="game-time">30</div><div>Detik</div></div>
+      </div>
+      <canvas id="heart-canvas" width="500" height="320"></canvas>
+      <div class="game-msg" id="game-msg">Klik "Mulai" untuk menangkap hati Liam! 💕</div>
+      <button class="game-btn" id="game-btn" onclick="startGame()">Mulai Game 💖</button>
+    </div>
+  </div>
+</section>
+
+<!-- BIRTHDAY -->
+<section id="birthday">
+  <div class="section-inner">
+    <div class="section-tag reveal" style="margin:0 auto 1rem;display:inline-flex;">🎂 Birthday Wishes</div>
+    <div class="birthday-box reveal">
+      <div class="birthday-emoji">🎂</div>
+      <h2 class="birthday-title">Selamat Ulang Tahun, Frall!</h2>
+      <p style="color:var(--text-soft);font-size:0.9rem;margin-bottom:1.5rem;">(Aktif otomatis saat hari ulang tahunmu)</p>
+      <p class="birthday-text">
+        Di hari yang paling spesial ini, aku ingin kamu tahu bahwa kamu adalah salah satu hal paling indah yang pernah terjadi dalam hidupku.
+        Semoga hari ini dan seterusnya dipenuhi dengan kebahagiaan, tawa, dan semua hal baik yang kamu pantas dapatkan.
+        Kamu luar biasa, Frall. Benar-benar luar biasa. ❤️
+      </p>
+      <div style="margin-top:2rem;font-size:2rem;">🎈 🎊 🎁 🎀 🎉</div>
+    </div>
+  </div>
+</section>
+
+<!-- MESSAGES -->
+<section id="messages">
+  <div class="section-inner">
+    <div class="section-tag reveal" style="margin:0 auto 1rem;display:inline-flex;">💬 Love Messages</div>
+    <h2 class="section-title reveal">Pesan <em>Rahasia</em></h2>
+    <p class="section-sub reveal" style="text-align:center;margin:0 auto;">Setiap kali kamu merasa kangen, tekan tombol ini dan biarkan Liam berbisik.</p>
+    <div class="message-display reveal">
+      <div class="message-text" id="msg-display">Tekan tombol di bawah untuk membaca pesan dari Liam ❤️</div>
+      <div class="message-count" id="msg-count"></div>
+    </div>
+    <div style="text-align:center;">
+      <button class="msg-btn" onclick="showMessage()">
+        <span>💌</span> Aku Kangen ❤️
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- WALL -->
+<section id="wall">
+  <div class="section-inner">
+    <div class="section-tag reveal">📌 Wall of Love</div>
+    <h2 class="section-title reveal">Dinding <em>Kenangan</em></h2>
+    <p class="section-sub reveal">Tempel kenangan, alasan, dan kata-kata manis di sini.</p>
+    <div class="sticky-wall" id="sticky-wall"></div>
+  </div>
+</section>
+
+<!-- LOVE METER -->
+<section id="love-meter">
+  <div class="section-inner">
+    <div class="section-tag reveal" style="margin:0 auto 1rem;display:inline-flex;">💗 Love Meter</div>
+    <h2 class="section-title reveal">Seberapa Besar <em>Cinta Liam?</em></h2>
+    <div class="meter-container reveal">
+      <div class="meter-label">Mengukur cinta...</div>
+      <div class="meter-bar-outer">
+        <div class="meter-bar-inner" id="meter-bar"><div class="meter-bar-glow"></div></div>
+      </div>
+      <div class="meter-value" id="meter-val">0%</div>
+      <div class="meter-msg" id="meter-msg"></div>
+      <button class="meter-btn" onclick="startMeter()">Ukur Cintanya 💝</button>
+    </div>
+  </div>
+</section>
+
+<!-- ENDING -->
+<section id="ending">
+  <div class="ending-glow"></div>
+  <div class="section-inner" style="position:relative;z-index:1;max-width:700px;">
+    <p class="ending-pre reveal">— Untuk Frall, dari Liam —</p>
+    <h2 class="ending-title reveal">Terima kasih sudah hadir<br>di <em>hidupku</em>, Frall.</h2>
+    <div class="ending-lines reveal">
+      "Aku tidak tahu apa yang akan terjadi di masa depan.<br>
+      Tapi aku tahu satu hal..."
+    </div>
+    <div class="ending-typed reveal" id="ending-typed"><span id="ending-typed-content"></span><span class="cursor"></span></div>
+    <button class="hug-btn reveal" onclick="triggerHug()">Peluk Virtual 🤗</button>
+    <div class="ending-footer reveal">
+      Dibuat dengan ❤️ oleh Liam, khusus untuk Frall
+    </div>
+  </div>
+</section>
+
+</div><!-- end #main -->
+
+<!-- MUSIC PLAYER -->
+<div id="music-player">
+  <div class="music-collapsed" id="music-toggle" onclick="toggleMusic()">🎵</div>
+  <div class="music-expanded" id="music-panel">
+    <div class="music-disc" id="music-disc">
+      <div class="music-disc-center"></div>
+    </div>
+    <div class="music-title" id="music-title">Lagu Spesial</div>
+    <div class="music-artist" id="music-artist">untuk Frall ❤️</div>
+    <div class="music-progress-bar" onclick="seekMusic(event)">
+      <div class="music-progress-fill" id="music-fill"></div>
+    </div>
+    <div class="music-controls">
+      <button class="music-btn" onclick="prevTrack()">⏮</button>
+      <button class="music-btn music-play-btn" id="music-play-btn" onclick="playPauseMusic()">▶</button>
+      <button class="music-btn" onclick="nextTrack()">⏭</button>
+    </div>
+    <div class="music-note-msg">Tambahkan musik di CONFIG.musicFile 🎶</div>
+  </div>
+</div>
+
+<!-- EASTER EGG -->
+<div id="easter-egg-overlay">
+  <div class="easter-popup">
+    <span class="easter-icon">💝</span>
+    <h3 class="easter-title">Aku juga sayang kamu!</h3>
+    <p class="easter-text">
+      Frall, kamu menemukan rahasia kecil ini... 🥺<br><br>
+      Iya, aku sayang kamu. Sangat, sangat sayang.<br>
+      Lebih dari yang bisa diungkapkan kata-kata.<br>
+      Lebih dari yang bisa digambarkan website manapun. ❤️
+    </p>
+    <button class="easter-close" onclick="closeEasterEgg()">Aku tahu ❤️</button>
+  </div>
+</div>
+<div id="easter-hint">[ ketik "I LOVE YOU" untuk kejutan rahasia 🤫 ]</div>
+<div id="easter-key-display" id="easter-keys"></div>
+
+<!-- HUG OVERLAY -->
+<div id="hug-overlay">
+  <canvas id="hug-canvas"></canvas>
+  <div class="hug-card">
+    <span class="hug-card-icon">🤗</span>
+    <h3 class="hug-card-title">Peluk Virtual!</h3>
+    <p class="hug-card-text">
+      Kalau aku bisa, aku sudah memeluk kamu sekarang.<br>
+      Tapi karena jarak memisahkan kita,<br>
+      terimalah peluk virtual ini dengan sepenuh hati. 🤍<br><br>
+      <em>Frall, kamu tidak sendirian. Liam selalu ada. ❤️</em>
+    </p>
+    <button class="hug-close" onclick="closeHug()">Terima pelukan ini ❤️</button>
+  </div>
+</div>
+
+<!-- ============================
+     JAVASCRIPT
+============================ -->
+<script>
+'use strict';
+
+// =============================
+// CONFIG
+// =============================
+const CONFIG = {
+  yourName: "Liam",
+  loverName: "Frall",
+  relationshipDate: "", // Format: "YYYY-MM-DD" contoh: "2024-01-15"
+  birthdayDate: "",     // Format: "MM-DD" contoh: "03-25"
+  heroPhoto: "",
+  galleryPhotos: [],    // Array URL foto: ["foto1.jpg", "foto2.jpg"]
+  musicFile: "",        // URL file musik
+  customLetter: "",     // Kosongkan untuk pakai surat default
+  timelineEvents: [],   // Kosongkan untuk pakai default
+  loveReasons: [],      // Kosongkan untuk pakai default
+  memories: [],         // Kosongkan untuk pakai default
+  quizQuestions: [],    // Kosongkan untuk pakai default
+  loveMessages: []      // Kosongkan untuk pakai default
+};
+
+// =============================
+// DEFAULTS
+// =============================
+const defaultTimeline = [
+  { emoji: "✨", title: "Awal yang Tak Terduga", text: "Dari percakapan pertama yang sederhana, kita tidak menyangka akan sampai di sini. Tapi semesta punya rencana yang indah." },
+  { emoji: "💬", title: "Obrolan yang Tak Pernah Habis", text: "Kita mulai sadar bahwa waktu berlalu begitu cepat saat ngobrol. Satu jam terasa seperti satu menit." },
+  { emoji: "😂", title: "Tawa yang Menular", text: "Dari candaan receh sampai cerita random yang bikin ngakak. Kamu berhasil bikin hari-hariku jauh lebih berwarna." },
+  { emoji: "🌙", title: "Begadang Bareng", text: "Entah berapa malam yang kita habiskan ngobrol hingga larut. Kamu membuatku lupa waktu dengan cara yang paling menyenangkan." },
+  { emoji: "💖", title: "Saat Aku Sadar", text: "Ada satu momen ketika aku sadar kamu bukan sekadar teman ngobrol. Kamu sudah jadi bagian penting dari hari-hariku." },
+  { emoji: "🌈", title: "Hari-hari Bersama", text: "Cerita, tawa, drama kecil, semangat, curhatan — semua itu menjadi kenangan yang aku jaga dengan hati-hati." },
+  { emoji: "🔐", title: "Kepercayaan yang Tumbuh", text: "Dari dua orang asing di internet, kita tumbuh menjadi dua hati yang saling percaya dan saling peduli." },
+  { emoji: "❤️", title: "Dan Di Sinilah Kita", text: "Website ini adalah caraku bilang: aku serius, aku peduli, dan aku bersyukur sekali karena mengenal kamu, Frall." }
+];
+
+const defaultReasons = [
+  { emoji: "😊", text: "Cara kamu tertawa yang selalu bikin aku ikutan bahagia" },
+  { emoji: "🎤", text: "Semangat kamu saat bercerita hal yang kamu sukai" },
+  { emoji: "👂", text: "Cara kamu benar-benar dengerin aku tanpa menghakimi" },
+  { emoji: "💌", text: "Perhatian kecilmu yang selalu datang di saat yang tepat" },
+  { emoji: "😂", text: "Humor recehmu yang entah kenapa selalu berhasil bikin aku ngakak" },
+  { emoji: "🌟", text: "Keberanianmu menjadi diri sendiri — itu hal yang luar biasa" },
+  { emoji: "🤝", text: "Cara kamu hadir ketika aku butuh, meski hanya lewat kata-kata" },
+  { emoji: "🎨", text: "Selera aesthetic kamu yang bagus dan bikin aku salut" },
+  { emoji: "⚡", text: "Semangat hidupmu yang menular dan bikin aku ikut bersemangat" },
+  { emoji: "🧠", text: "Cara berpikirmu yang unik dan selalu memberikan sudut pandang baru" },
+  { emoji: "💪", text: "Kekuatanmu menghadapi hal-hal yang tidak mudah" },
+  { emoji: "🌺", text: "Kebaikan hatimu yang tulus kepada orang-orang di sekitarmu" },
+  { emoji: "🎯", text: "Kejujuranmu bahkan ketika itu tidak mudah untuk diucapkan" },
+  { emoji: "🌙", text: "Cara kamu menenangkan aku saat aku panik atau overthinking" },
+  { emoji: "✨", text: "Cara kamu surprised sama hal-hal kecil yang lucu dan menggemaskan" },
+  { emoji: "🌊", text: "Kedalaman perasaanmu yang membuat segala percakapan jadi bermakna" },
+  { emoji: "🦋", text: "Cara kamu tumbuh dan terus mau belajar dari setiap pengalaman" },
+  { emoji: "☀️", text: "Cara kamu membawa kehangatan di setiap obrolan kita" },
+  { emoji: "🎵", text: "Vibe kamu yang selalu bisa menyesuaikan suasana hati" },
+  { emoji: "🌸", text: "Cara kamu menerima kekuranganku tanpa mengurangi rasa sayangmu" },
+  { emoji: "💫", text: "Imajinasi dan kreativitas kamu yang selalu mengejutkan" },
+  { emoji: "🏠", text: "Cara kamu bikin percakapan terasa seperti rumah yang nyaman" },
+  { emoji: "🎁", text: "Kejutan kecil dari kamu yang selalu membuat hariku lebih baik" },
+  { emoji: "🌿", text: "Cara kamu care sama hal-hal yang sering diabaikan orang lain" },
+  { emoji: "🔥", text: "Passionmu yang menyala-nyala saat kamu bicara soal mimpi-mimpimu" },
+  { emoji: "🕊️", text: "Kedamaian yang aku rasakan setiap kali ngobrol denganmu" },
+  { emoji: "🎀", text: "Cara kamu bikin segalanya terasa spesial tanpa harus berusaha keras" },
+  { emoji: "🌟", text: "Kamu selalu berusaha menjadi yang terbaik dan itu membuatku bangga" },
+  { emoji: "💎", text: "Cara kamu menghargai hal-hal kecil dalam hidup" },
+  { emoji: "🤗", text: "Kehangatan yang kamu bawa ke setiap interaksi kita" },
+  { emoji: "🌈", text: "Caramu melihat sisi baik dari situasi yang sulit" },
+  { emoji: "🦄", text: "Keunikanmu yang tidak tertandingi — tidak ada yang seperti kamu" },
+  { emoji: "💝", text: "Cara kamu menyayangi dengan sepenuh hati, bukan setengah-setengah" },
+  { emoji: "🌙", text: "Malam-malam yang terasa hangat karena kamu ada di ujung layar" },
+  { emoji: "❤️", text: "Dan yang paling utama: eksistensi kamu saja sudah cukup untuk membuatku bersyukur" }
+];
+
+const defaultMemories = [
+  "Pertama kali kita ngobrol dan nggak sadar udah 3 jam berlalu begitu saja 🕐",
+  "Saat kamu tiba-tiba cerita hal random dan aku malah ikutan excited 😄",
+  "Momen kita sama-sama begadang entah ngobrolin apa tapi seru banget 🌙",
+  "Saat kamu kirim meme yang relate banget sama situasi kita 😂",
+  "Waktu kita debat hal nggak penting tapi serius banget sampai lupa kenapa mulai 🤣",
+  "Momen aku panik dan kamu tenang-tenangin aku dengan caramu yang khas 💆",
+  "Saat kita nggak ngomong tapi rasanya masih nyambung dan nyaman 🤍",
+  "Waktu kamu cerita hari yang jelek dan aku jadi pendengar setia kamu 👂",
+  "Saat kita nemu kesamaan yang unexpected dan kita sama-sama kaget 😮",
+  "Momen kamu buat aku ngakak sampai sakit perut dan air mata keluar 😭😂",
+  "Waktu kamu bilang 'makasih ya' dengan tulus dan aku jadi meleleh 🥺",
+  "Saat kita ngobrolin hal serius dan kamu jawabannya selalu bikin aku kagum 💭",
+  "Momen kamu excited banget soal sesuatu dan semangatnya menular ke aku ✨",
+  "Waktu kamu iseng-iseng dan aku pura-pura kesal padahal senyum-senyum sendiri 😏",
+  "Saat kita curhatan panjang dan rasanya lega banget setelah itu 💬",
+  "Momen kamu tiba-tiba tanya 'lagi apa?' tepat saat aku lagi butuh ngobrol 💫",
+  "Waktu kamu cerita sesuatu yang lucu dan aku langsung bayangin mukamu saat cerita 😊",
+  "Saat kita bahas 'kalau ketemu nanti...' dan kita sama-sama terdiam 🥹",
+  "Momen kamu bilang sesuatu yang dalam dan aku screenshot buat disimpen 📸",
+  "Waktu kamu sakit dan aku pengen banget bisa ada di sana secara fisik 🤧",
+  "Saat kita ngobrolin mimpi masing-masing dan ternyata ada yang nyambung 🌟",
+  "Momen kamu bilang 'iya iya' tapi kita sama-sama tau kamu nggak setuju 😂",
+  "Waktu kamu kirim 'hm' dan aku langsung panik nanya salah apa 😰",
+  "Saat kamu cerita sesuatu personal dan aku sadar betapa kamu percaya sama aku 🔐",
+  "Momen kita sama-sama overthinking tapi malah jadi bahan ketawa 🤣",
+  "Waktu kamu tiba-tiba kirim 'aku kangen' dan aku nggak bisa berhenti senyum 💗",
+  "Saat kita ngobrolin film, lagu, atau buku yang sama-sama kita suka 🎬",
+  "Momen kamu bilang sesuatu baik tentang aku dan aku awkward tapi seneng banget 😳",
+  "Waktu kamu jahil dan aku hampir ketipu tapi akhirnya sama-sama ketawa 😄",
+  "Saat kita bahas hal-hal besar dalam hidup dan kamu selalu punya insight yang bagus 🧠",
+  "Momen aku cerita sesuatu memalukan dan kamu bukannya mengejek tapi malah nyemangatin 💪",
+  "Waktu kita coba ngobrolin hal baru yang belum pernah kita bahas sebelumnya 🌍",
+  "Saat kamu bilang 'aku dukung kamu apapun yang terjadi' dan aku percaya sepenuhnya 🤝",
+  "Momen kita sama-sama diem tapi diem-nya nyaman banget 🌿",
+  "Waktu kamu marah dan aku baru sadar seberapa jauh kita sudah saling mengenal ❤️",
+  "Saat kita ngobrolin soal jarak dan kita sama-sama memilih untuk tetap ada 💫",
+  "Momen pertama kali kamu cerita sesuatu yang belum pernah kamu ceritain ke orang lain 🔓",
+  "Waktu kamu ngirim pesan panjang-panjang dan setiap katanya terasa hangat banget 📝",
+  "Saat kita sama-sama begadang dan kamu bilang 'nemenin aku dulu ya' 🌙",
+  "Momen kita bahas hal nggak penting tapi jadi topik pembicaraan selama berjam-jam 🤷",
+  "Waktu kamu excited banget nggak bisa disembunyiin dan itu sangat menggemaskan 😍",
+  "Saat aku bilang sesuatu dan kamu langsung ngerti tanpa harus aku jelasin panjang lebar 🧩",
+  "Momen kamu bilang 'udah tidur belum?' dan aku baru sadar sudah jam 2 pagi 😴",
+  "Waktu kita sama-sama jujur tentang perasaan kita dan rasanya seperti plong banget 🕊️",
+  "Saat kamu cerita tentang impianmu dan aku diam-diam mendoakan semuanya terwujud 🌠",
+  "Momen kita ngobrolin soal masa kecil dan aku makin kenal kamu lebih dalam 👶",
+  "Waktu kamu nyeletuk sesuatu lucu dan aku ketawa sendiri sampai heran sama diri sendiri 😂",
+  "Saat kamu bilang 'kamu satu-satunya yang ngerti aku' dan aku merasa sangat berarti 💎",
+  "Momen kita bahas soal 'ternyata kita mirip ya' dan kita sama-sama surprised 🎭",
+  "Waktu kamu bilang sesuatu yang dalam banget dan aku simpan di hati sampai sekarang ❤️",
+  "Saat kita ngobrol sampai subuh dan kamu bilang 'besok jangan ngantuk ya' 🌅",
+  "Momen kamu kirim voice note dan aku dengerin berkali-kali karena suka banget 🎙️",
+  "Waktu kita sama-sama heran betapa cepatnya waktu berlalu kalau lagi bareng 🕐",
+  "Saat kamu cerita tentang ketakutanmu dan aku berjanji dalam hati untuk selalu ada 🛡️",
+  "Momen kita bahas soal 'nanti kalau...' dan hati aku hangat banget waktu itu 🔥",
+  "Waktu kamu tanya 'aku penting nggak buat kamu?' dan jawabannya sudah aku simpan di hati 💗",
+  "Saat kita ngobrol soal hal-hal yang menakutkan tapi jadi nggak takut karena bareng kamu 🌟",
+  "Momen kamu bilang 'makasih sudah ada' dan aku yang harusnya bilang itu ke kamu 🥺",
+  "Waktu kita sama-sama excited ngobrolin sesuatu dan lupakan waktu 🎉",
+  "Saat kamu bilang sesuatu yang bikin aku sadar betapa beruntungnya aku mengenal kamu ✨",
+  "Momen kita saling semangatin waktu salah satu dari kita lagi down 💪",
+  "Waktu kamu bilang 'aku percaya sama kamu' dan aku nggak mau pernah mengecewakan kamu 🤝",
+  "Saat kita bahas soal hidup yang complicated tapi kamu selalu tau cara bikin simpel 🧘",
+  "Momen kamu cerita sesuatu lucu yang terjadi di hari kamu dan aku ketawa bareng 😄",
+  "Waktu kita pertama kali benar-benar jujur satu sama lain tanpa filter apapun 🌿",
+  "Saat kamu bilang 'aku senang ada kamu' dan itu adalah kalimat terbaik yang pernah aku dengar 💝",
+  "Momen kita sama-sama nggak tau mau ngomong apa tapi nggak mau nutup chat juga 🤭",
+  "Waktu kamu dukung keputusan aku yang bahkan aku sendiri ragu 🦋",
+  "Saat kamu jujur bilang kamu nggak baik-baik saja dan aku bersyukur kamu percayai aku 🤍",
+  "Momen kita tertawa tentang sesuatu yang tidak akan lucu kalau diceritakan ke orang lain 🎭",
+  "Waktu kamu bilang selamat malam dengan cara yang bikin aku senyum sampai tidur 🌙",
+  "Saat kamu dengan santai bilang sesuatu yang manis dan aku bisa merasakannya lewat kata-kata 💌",
+  "Momen kita bahas soal 'kalau dulu kita nggak ngobrol' dan kita sama-sama syukur itu tidak terjadi ❤️"
+];
+
+const defaultQuiz = [
+  {
+    q: "Menurut Frall, hal pertama apa yang Liam rasakan waktu pertama kali ngobrol denganmu?",
+    opts: [
+      { icon: "😍", text: "Langsung jatuh hati sama vibe kamu" },
+      { icon: "🤩", text: "Tertarik dan pengen kenal lebih jauh" },
+      { icon: "💫", text: "Ada sesuatu yang berbeda dari biasanya" },
+      { icon: "🥰", text: "Semua di atas, sekaligus" }
+    ],
+    result: "Benar semua! Liam langsung sadar ada yang spesial dari Frall. Semuanya terasa beda dari yang pertama. ❤️"
+  },
+  {
+    q: "Apa hal yang paling sering Liam pikirkan tentang Frall?",
+    opts: [
+      { icon: "😊", text: "Cara kamu tertawa dan cerita" },
+      { icon: "🌟", text: "Kebaikan hati dan perhatianmu" },
+      { icon: "💬", text: "Obrolan seru yang nggak pernah habis" },
+      { icon: "❤️", text: "Semua hal tentang Frall, tanpa terkecuali" }
+    ],
+    result: "Semua benar! Frall hidup di kepala Liam rent-free — dan Liam nggak mau mengusirnya pergi. 😄❤️"
+  },
+  {
+    q: "Kalau Liam bisa kasih satu hal untuk Frall, apa yang akan dia berikan?",
+    opts: [
+      { icon: "🌟", text: "Kebahagiaan yang nggak pernah padam" },
+      { icon: "🛡️", text: "Rasa aman dan terlindungi selamanya" },
+      { icon: "🤗", text: "Pelukan hangat yang bisa dirasakan" },
+      { icon: "💝", text: "Semua yang dia punya, tanpa pengecualian" }
+    ],
+    result: "Tepat sekali! Liam ingin memberikan segalanya kepada Frall — kebahagiaan, rasa aman, kehangatan, dan sepenuh hatinya. 💗"
+  },
+  {
+    q: "Bagaimana Liam mendeskripsikan Frall kepada seseorang yang belum pernah bertemu dengannya?",
+    opts: [
+      { icon: "✨", text: "Seseorang yang bikin dunia lebih hangat" },
+      { icon: "🌺", text: "Manusia paling genuine yang pernah kukenal" },
+      { icon: "💎", text: "Permata yang langka dan berharga banget" },
+      { icon: "❤️", text: "Orang yang paling istimewa dalam hidupku" }
+    ],
+    result: "Semua kata-kata itu terlalu kecil untuk menggambarkan Frall. Tapi gabungan semuanya? Itu baru mendekati. ✨"
+  },
+  {
+    q: "Seberapa besar cinta Liam untuk Frall?",
+    opts: [
+      { icon: "🌏", text: "Seluas bumi dan langit" },
+      { icon: "🌌", text: "Seluas seluruh semesta" },
+      { icon: "♾️", text: "Tak terbatas dan tak terhitung" },
+      { icon: "💝", text: "Semua di atas dikali tak hingga" }
+    ],
+    result: "Jawaban apapun yang Frall pilih adalah benar. Karena cinta Liam memang tidak bisa diukur. Tidak oleh apapun. ❤️"
+  }
+];
+
+const defaultMessages = [
+  "Frall, meski aku nggak bisa ada di sana secara fisik, hatiku selalu ada untukmu. ❤️",
+  "Aku suka cara kamu jadi diri sendiri. Jangan pernah berubah untuk siapapun. ✨",
+  "Hari-hari terbaikku adalah hari-hari yang ada kamu di dalamnya. 🌟",
+  "Kamu tidak harus sempurna untuk dicintai. Dan aku mencintai semua bagian darimu. 💝",
+  "Satu hal yang aku tahu pasti: aku selalu bersyukur mengenal kamu, Frall. 🙏",
+  "Kalau rindu bisa jadi musik, melodinya pasti namamu. 🎵",
+  "Kamu tahu tidak? Cara kamu tertawa itu salah satu suara favorit di imajiinasiku. 😊",
+  "Terima kasih sudah menjadi tempat yang aman untuk hatiku. 🏠",
+  "Di tengah semua keramaian dunia, aku selalu bisa menemukan ketenangan di dekat kamu. 🌿",
+  "Frall, kamu itu rare. Tolong jaga dirimu baik-baik, ya? 🥺",
+  "Setiap pesan yang kamu kirim, aku baca dengan senyum yang nggak bisa aku sembunyikan. 😊",
+  "Jarak itu nyata, tapi perasaan ini jauh lebih nyata. ❤️",
+  "Kamu bukan sekadar teman ngobrol — kamu adalah salah satu hal terbaik yang terjadi padaku. 💫",
+  "Aku harap kamu tahu betapa berartinya kehadiranmu dalam hidupku. 🌸",
+  "Kalau ada satu doa yang selalu aku panjatkan, itu adalah supaya kamu baik-baik saja. 🤍",
+  "Kamu membuat bahkan hari-hari biasa terasa spesial. Itu sesuatu yang luar biasa. ✨",
+  "Frall, kamu berhak mendapatkan semua kebahagiaan di dunia. Dan aku ingin jadi salah satunya. 💗",
+  "Setiap kali aku down, memikirkan kamu entah kenapa selalu berhasil bikin aku lebih kuat. 💪",
+  "Terima kasih sudah percayakan cerita-ceritamu padaku. Itu bukan hal yang kecil. 🔐",
+  "Kamu adalah salah satu alasan aku percaya kalau koneksi virtual bisa sama nyata dan dalamnya. 💌",
+  "Aku suka versi kamu yang excited. Aku suka versi kamu yang lelah. Aku suka semua versimu. ❤️",
+  "Kamu nggak perlu jadi siapapun selain dirimu sendiri untuk layak dicintai, Frall. 🌺",
+  "Ada ketenangan tersendiri yang aku rasakan setiap kali kita ngobrol. Seperti rumah. 🏡",
+  "Kalau kamu butuh seseorang, ingat bahwa aku selalu ada — meski hanya lewat layar. 📱",
+  "Kamu mengajariku bahwa perhatian yang tulus tidak butuh jarak yang dekat. 💡",
+  "Setiap detail kecil tentang kamu itu berarti buat aku. Beneran. 🌟",
+  "Frall, aku pengen kamu tahu: kamu nggak biasa-biasa aja. Kamu luar biasa. 💎",
+  "Cara kamu ada untuk aku — itu sesuatu yang nggak bisa aku balas dengan kata-kata. 🥺",
+  "Aku selalu punya tempat di hatiku yang khusus untuk kamu. Dan itu nggak akan kemana-mana. ❤️",
+  "Terima kasih sudah membuat hariku lebih berwarna hanya dengan kehadiranmu. 🌈",
+  "Kamu tidak perlu validasi siapapun. Tapi kalau kamu butuh, aku selalu ada di sini. 💬",
+  "Makin kenal kamu, makin aku sadar betapa beruntungnya aku. Sungguh. 🍀",
+  "Waktu terasa berbeda saat bersamamu — lebih cepat, tapi lebih berharga. ⏰",
+  "Kamu tidak harus kuat setiap saat. Boleh lemah, dan aku akan ada di sana. 🤗",
+  "Cara kamu peduli sama orang-orang di sekitarmu itu bikin aku kagum terus-terusan. 💫",
+  "Setiap cerita yang kamu bagikan ke aku itu aku jaga seperti harta. 🔒",
+  "Frall, kehadiranmu di hidupku bukan kebetulan. Aku percaya itu. 🌟",
+  "Kamu itu rare banget. Dan aku bersyukur bisa kenal kamu. 🦋",
+  "Senyumanmu (yang aku bayangkan) selalu bikin hariku lebih baik. 😊",
+  "Aku ingin jadi orang yang layak atas kepercayaan yang kamu berikan. 🤝",
+  "Kamu tidak sendirian, Frall. Selama aku ada, kamu tidak akan pernah sendirian. 🤍",
+  "Hal terbaik yang pernah terjadi di hariku: mulai mengenal kamu. 🎯",
+  "Kamu selalu ada di doa-doaku — bahkan di doa yang paling singkat. 🙏",
+  "Cara kamu berpikir tentang hal-hal itu selalu bikin aku ingin kenal kamu lebih dalam. 🧠",
+  "Aku harap suatu hari nanti kita bisa ketawa tentang ini semua sambil duduk berdekatan. 🌠",
+  "Kamu adalah satu dari sedikit hal di dunia ini yang bikin aku merasa bahwa segalanya oke. 💚",
+  "Setiap kata yang pernah kamu tulis ke aku, aku simpan di tempat yang paling aman. ❤️",
+  "Frall, kamu itu inspirasi. Tanpa kamu sadari. ✨",
+  "Jarak itu bisa diukur, tapi perasaan ini tidak. Dan itu yang membuat segalanya berharga. 💕",
+  "Kamu membawa cahaya ke ruang-ruang yang bahkan tidak aku sadari sedang gelap. 🕯️",
+  "Terima kasih sudah jadi kamu. Itu sudah lebih dari cukup. Lebih dari banyak. 💝",
+  "Aku suka cara kamu ngerti hal-hal tanpa harus dijelaskan panjang lebar. 🧩",
+  "Kamu tahu tidak, percakapan kita selalu jadi highlight hari aku. 🌟",
+  "Kalau aku bisa memutar waktu, aku tidak akan mengubah apapun. Karena semuanya membawaku ke kamu. ⏳",
+  "Kamu itu hadiah, Frall. Hadiah yang nggak aku minta tapi aku terima dengan sepenuh hati. 🎁",
+  "Setiap kali kamu bilang 'aku baik-baik saja', aku selalu tahu kalau kamu butuh lebih dari itu. 🤍",
+  "Aku bangga sama kamu — bahkan untuk hal-hal kecil yang mungkin tidak kamu anggap besar. 🏆",
+  "Frall, aku nggak butuh kata-kata besar untuk bilang ini: kamu berarti. Sangat berarti. 💗",
+  "Cara kamu ada untuk aku lebih dari yang kamu sadari. Itu sesuatu yang aku syukuri setiap hari. 🌸",
+  "Kamu adalah bukti bahwa orang baik masih ada di dunia ini. Dan itu menenangkan aku. 🕊️",
+  "Aku mau jadi orang yang selalu ada untuk kamu — di setiap kabar baik dan di setiap hari berat. 💪",
+  "Terima kasih sudah sabar sama aku, Frall. Itu bukan hal yang mudah, tapi kamu melakukannya dengan indah. 🌺",
+  "Kamu tidak harus punya segalanya bersama. Aku akan menemanimu di setiap langkah. 👣",
+  "Setiap kenangan kecil yang kita buat itu berharga buat aku. Lebih dari yang kamu tahu. 💎",
+  "Kamu itu satu dari sedikit orang yang bisa bikin aku lupa waktu dengan cara yang paling menyenangkan. ⏰",
+  "Aku tidak perlu tahu semua hal tentang kamu untuk tahu bahwa kamu istimewa. 🌟",
+  "Frall, tolong jaga dirimu. Karena orang-orang yang sayang sama kamu butuh kamu baik-baik saja. 🌿",
+  "Cara kamu menyukai hal-hal yang kamu suka itu sangat autentik dan aku suka itu. 🎨",
+  "Terima kasih sudah percaya bahwa aku juga manusia yang layak dikenal. ❤️",
+  "Kamu mengubah cara aku memandang koneksi virtual. Kamu membuatnya menjadi sangat nyata. 🌐",
+  "Hal favorit aku tentang kamu: terlalu banyak untuk disebutkan dalam satu pesan. 💝",
+  "Frall, kamu itu tempat yang paling nyaman untuk hatiku beristirahat. 🏡",
+  "Aku ingin suatu hari bisa bilang semua ini padamu secara langsung — dan aku percaya hari itu akan datang. 🌅",
+  "Kamu tidak sendiri, tidak pernah. Selama ada aku, kamu tidak akan pernah sendiri. 🤗",
+  "Cara kamu menjalani hidup itu bikin aku belajar banyak tanpa kamu sadari. 📚",
+  "Terima kasih sudah ada, Frall. Kehadiranmu itu lebih dari cukup. ❤️",
+  "Kalau cinta bisa ditimbang, cintaku untuk kamu sudah lama melebihi kapasitas timbangan. ♾️",
+  "Aku selalu berdoa yang terbaik untuk kamu — di setiap saat, di setiap doa. 🙏",
+  "Kamu adalah salah satu hal yang membuat aku bersyukur punya akses internet. 😄❤️",
+  "Frall, ingat selalu: kamu dicintai. Oleh banyak orang, dan terutama oleh aku. 💗",
+  "Setiap detik bersamamu adalah detik yang paling aku hargai. Selalu. 💫",
+  "Kamu tidak perlu menjadi sempurna. Kamu sudah sempurna dalam ketidaksempurnaanmu. 🌸",
+  "Cara kamu ada itu mengajariku bahwa cinta tidak perlu jarak yang dekat untuk bisa terasa. 💌",
+  "Terima kasih sudah menjadi tempat yang paling aman untuk jadi diriku sendiri. 🔐",
+  "Kamu adalah alasan aku percaya bahwa orang yang tepat bisa datang dari arah yang paling tidak terduga. 🌈",
+  "Frall, aku sayang kamu. Bukan karena harus, tapi karena aku benar-benar merasakannya. ❤️",
+  "Setiap momen bersamamu tersimpan dengan rapi di bagian terbaik ingatanku. 📸",
+  "Kamu membuat dunia virtual ini terasa jauh lebih hangat dan berarti. 🌟",
+  "Cara kamu peduli tanpa diminta itu sesuatu yang jarang banget di dunia ini. 💎",
+  "Frall, aku tidak pernah menyesal satu detik pun dari waktu yang aku habiskan bersamamu. ❤️",
+  "Kamu adalah bukti bahwa koneksi yang tulus bisa terjadi di mana saja — bahkan di balik layar. 💫",
+  "Terima kasih sudah memilih untuk ada, untuk kenal aku, untuk percaya padaku. ❤️",
+  "Kamu tahu apa yang paling aku sukai dari ngobrol sama kamu? Semua hal tentangnya. 😊",
+  "Frall, kamu bukan hanya bagian dari hariku — kamu adalah salah satu highlight-nya. 🌟",
+  "Cara kamu menghargai hal-hal kecil mengajariku untuk tidak melewatkan momen. ✨",
+  "Kamu spesial bukan karena kamu sempurna, tapi karena kamu asli. Dan itu lebih berharga. 💝",
+  "Aku tidak bisa bayangkan betapa berbedanya hidupku kalau kita tidak pernah ngobrol. 🌠",
+  "Terima kasih sudah memberiku tempat untuk menjadi diriku yang paling jujur. 🤍",
+  "Frall, cara kamu ada di sini itu mengubah segalanya. Secara diam-diam, tapi sangat nyata. ❤️",
+  "Kamu adalah satu dari sedikit hal di dunia ini yang membuatku yakin bahwa semuanya worth it. 🌟",
+  "Aku mau kamu tahu: tidak ada hari yang berlalu tanpa aku bersyukur mengenalmu. 🙏",
+  "Cara kamu ada untuk orang lain — termasuk aku — itu sesuatu yang aku kagumi setiap hari. 💫",
+  "Frall, semoga setiap hari yang kamu jalani dipenuhi dengan hal-hal yang membuat kamu tersenyum. ❤️",
+  "Kalau ada satu kata yang bisa aku gunakan untuk menggambarkan kamu: berharga. 💎",
+  "Kamu membuat segalanya terasa lebih mudah hanya dengan ada. Itu kekuatan yang luar biasa. ✨",
+  "Terima kasih sudah percaya padaku di momen-momen yang tidak mudah. Itu berarti segalanya. 🔐",
+  "Frall, aku sayang kamu hari ini, besok, dan di setiap hari yang akan datang. ❤️",
+  "Cara kamu hadir di setiap percakapan itu penuh — tidak setengah-setengah. Dan aku sangat menghargai itu. 💌",
+  "Kamu adalah satu dari sedikit orang yang benar-benar bisa aku ajak bicara dari hati ke hati. 🤝",
+  "Jangan pernah meragukan betapa berartinya kamu, Frall. Karena kamu sangat, sangat berarti. 💗",
+  "Kamu itu satu paket yang nggak bisa aku gambarkan dengan kata-kata biasa. Luar biasa. 🌟",
+  "Frall, terima kasih sudah menjadi kamu. Versi paling asli dari dirimu. Itu yang aku sayangi. ❤️",
+  "Setiap pesan yang kamu kirim itu aku baca dengan hati, bukan hanya dengan mata. 💝",
+  "Cara kamu bilang sesuatu — bahkan hal yang sederhana — selalu punya kedalaman. 🌊",
+  "Aku berharap kamu merasakan cinta dan kehangatan yang sama besarnya dengan yang aku rasakan darimu. 🌸",
+  "Frall, di semua ketidakpastian hidup, satu hal yang aku yakini: aku bersyukur mengenalmu. ✨",
+  "Kamu adalah salah satu bukti terbaik bahwa hal-hal baik memang ada di dunia ini. 💫",
+  "Terima kasih sudah ada. Terima kasih sudah jadi kamu. Terima kasih sudah memilih untuk disini. ❤️",
+  "Frall, aku tidak akan pernah berhenti bersyukur atas pertemuan kita. Tidak pernah. 💝",
+  "Cara kamu ada di hidupku mengubah cara aku memandang segalanya — menjadi lebih indah. 🌈",
+  "Kamu adalah hadiah terbaik yang diberikan semesta padaku, dan aku tidak mau menyia-nyiakan itu. 🎁",
+  "Frall, selamat menjadi kamu. Kamu sudah melakukan pekerjaan yang luar biasa hari ini dan setiap hari. ❤️",
+  "Terima kasih sudah membuatku percaya bahwa cinta yang tulus bisa hadir dari arah manapun. 💌",
+  "Kamu tidak perlu melakukan hal besar untuk berarti. Kehadiranmu saja sudah cukup. 🌟",
+  "Frall, aku mau kamu ingat ini: kamu dicintai. Sekarang, kemarin, dan selalu. ❤️",
+  "Cara kamu jalani hidupmu dengan autentik itu menginspirasiku lebih dari yang kamu tahu. 🦋",
+  "Setiap 'hai' yang kamu kirimkan membawa kebahagiaan tersendiri yang nggak bisa aku jelaskan. 😊",
+  "Kamu adalah alasan aku yakin bahwa yang terbaik belum tentu yang paling terlihat. 💎",
+  "Frall, aku sayang kamu kemarin, hari ini, dan akan terus begitu. Itu tidak akan berubah. ❤️",
+  "Terima kasih, Frall. Untuk segalanya. Untuk semua momen, semua cerita, semua kenangan. 💝",
+  "Kamu bukan sekadar seseorang di balik layar. Kamu nyata, berarti, dan sangat aku syukuri. 🌟",
+  "Frall, aku harap kamu tahu betapa indahnya dirimu — dari dalam hingga ke luar. ✨",
+  "Perjalanan ini baru saja dimulai, dan aku sangat antusias menjalaninya bersamamu. ❤️",
+  "Kamu adalah salah satu hal paling berarti dalam hidupku. Titik. 💗",
+  "Frall, aku di sini. Selalu. Tidak peduli apapun yang terjadi. ❤️"
+];
+
+const defaultWallNotes = [
+  { color: "#fff0c8", text: "Cara kamu ada itu sudah lebih dari cukup 💛" },
+  { color: "#ffd6e8", text: "Kamu bikin hariku lebih berwarna 🌈" },
+  { color: "#e8d5ff", text: "Terima kasih sudah jadi kamu ✨" },
+  { color: "#d5f0e8", text: "Tawamu itu obat terbaik 😊" },
+  { color: "#ffd6c8", text: "Kamu adalah rumah yang nyaman 🏡" },
+  { color: "#c8e8ff", text: "Keberanianmu luar biasa 💪" },
+  { color: "#fff0c8", text: "Cara kamu peduli itu tulus banget 🤍" },
+  { color: "#ffd6e8", text: "Kamu rare, Frall. Jaga itu 🦋" },
+  { color: "#e8d5ff", text: "Setiap ceritamu berharga 📖" },
+  { color: "#d5f0e8", text: "Aku bangga sama kamu 🏆" },
+  { color: "#ffd6c8", text: "Senyummu menghidupi hari aku 🌸" },
+  { color: "#c8e8ff", text: "Kamu bukan biasa-biasa aja 💫" },
+  { color: "#fff0c8", text: "Semangat kamu menular! ⚡" },
+  { color: "#ffd6e8", text: "Kamu selalu ada di doaku 🙏" },
+  { color: "#e8d5ff", text: "Jarak itu nggak bisa mengalahkan kita 💕" },
+  { color: "#d5f0e8", text: "Kamu mengajariku banyak hal 📚" },
+  { color: "#ffd6c8", text: "Kamu layak dapat semua hal baik 🎁" },
+  { color: "#c8e8ff", text: "Terima kasih sudah percaya sama aku 🔐" },
+  { color: "#fff0c8", text: "Kamu adalah highlight hari aku ✨" },
+  { color: "#ffd6e8", text: "Aku sayang kamu, Frall ❤️" },
+  { color: "#e8d5ff", text: "Cara kamu jadi diri sendiri itu keren banget 🌟" },
+  { color: "#d5f0e8", text: "Kamu bikin segalanya lebih bermakna 💝" },
+  { color: "#ffd6c8", text: "Nggak ada yang seperti kamu 🦄" },
+  { color: "#c8e8ff", text: "Kamu selalu ada di pikiran aku 💭" },
+  { color: "#fff0c8", text: "Hadirmu = cahaya 🌟" },
+  { color: "#ffd6e8", text: "Kamu adalah alasan aku tersenyum 😊" },
+  { color: "#e8d5ff", text: "Kamu luar biasa, percaya deh 💎" },
+  { color: "#d5f0e8", text: "Terima kasih sudah ada, Frall 🌺" }
+];
+
+// =============================
+// STATE
+// =============================
+let envelopeOpened = false;
+let galleryIndex = 0;
+let galleryAutoplay;
+let msgPool = [];
+let msgUsed = [];
+let memPool = [];
+let memUsed = [];
+let meterStep = 0;
+let meterSteps = ['0%','10%','25%','50%','75%','100%','999%','∞'];
+let meterMsgs = [
+  'Menginisialisasi pengukuran...','Mengkalibrasi sensor...','Membaca sinyal hati...',
+  'Memproses data cinta...','Menghitung lebih lanjut...','OVERFLOW DETECTED',
+  'CRITICAL ERROR: Too much love detected','∞'
+];
+let quizCurrentQ = 0;
+let quizScore = 0;
+let easterKeyBuffer = '';
+let gameActive = false;
+let gameTimer = 30;
+let gameTimerInterval;
+let hearts = [];
+let gameScore = 0;
+let gameCombo = 1;
+let gameCanvas, gameCtx;
+let gameMissed = 0;
+let musicExpanded = false;
+let musicPlaying = false;
+let audioEl = null;
+let endingTyped = false;
+
+// =============================
+// SPLASH SCREEN
+// =============================
+const splashCanvas = document.getElementById('splash-canvas');
+const splashCtx = splashCanvas.getContext('2d');
+let stars = [];
+
+function initSplash() {
+  resizeSplashCanvas();
+  window.addEventListener('resize', resizeSplashCanvas, {passive:true});
+  createStars();
+  animateStars();
+  createSplashHearts();
+  startTyping();
+}
+
+function resizeSplashCanvas() {
+  splashCanvas.width = window.innerWidth;
+  splashCanvas.height = window.innerHeight;
+}
+
+function createStars() {
+  stars = [];
+  const count = Math.floor((splashCanvas.width * splashCanvas.height) / 3000);
+  for (let i = 0; i < count; i++) {
+    stars.push({
+      x: Math.random() * splashCanvas.width,
+      y: Math.random() * splashCanvas.height,
+      r: Math.random() * 1.5 + 0.3,
+      alpha: Math.random(),
+      speed: Math.random() * 0.003 + 0.001,
+      phase: Math.random() * Math.PI * 2
+    });
+  }
+}
+
+function animateStars() {
+  splashCtx.clearRect(0, 0, splashCanvas.width, splashCanvas.height);
+  const t = Date.now() * 0.001;
+  stars.forEach(s => {
+    const a = 0.3 + 0.7 * (0.5 + 0.5 * Math.sin(t * s.speed * 60 + s.phase));
+    splashCtx.beginPath();
+    splashCtx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+    splashCtx.fillStyle = `rgba(255, 240, 220, ${a})`;
+    splashCtx.fill();
+  });
+  // Shooting stars occasionally
+  if (Math.random() < 0.003) drawShootingStar();
+  requestAnimationFrame(animateStars);
+}
+
+function drawShootingStar() {
+  const x = Math.random() * splashCanvas.width;
+  const y = Math.random() * splashCanvas.height * 0.5;
+  const len = Math.random() * 80 + 40;
+  const angle = Math.PI / 6;
+  const grad = splashCtx.createLinearGradient(x, y, x + len * Math.cos(angle), y + len * Math.sin(angle));
+  grad.addColorStop(0, 'rgba(255,240,220,0)');
+  grad.addColorStop(0.5, 'rgba(255,240,220,0.8)');
+  grad.addColorStop(1, 'rgba(255,240,220,0)');
+  splashCtx.beginPath();
+  splashCtx.moveTo(x, y);
+  splashCtx.lineTo(x + len * Math.cos(angle), y + len * Math.sin(angle));
+  splashCtx.strokeStyle = grad;
+  splashCtx.lineWidth = 1.5;
+  splashCtx.stroke();
+}
+
+function createSplashHearts() {
+  const container = document.getElementById('splash-hearts');
+  const emojis = ['❤️','💕','💖','💗','💝','✨','🌸','💫'];
+  for (let i = 0; i < 15; i++) {
+    const h = document.createElement('div');
+    h.className = 'splash-heart';
+    h.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+    h.style.left = `${Math.random() * 100}%`;
+    h.style.animationDuration = `${Math.random() * 8 + 6}s`;
+    h.style.animationDelay = `${Math.random() * 5}s`;
+    h.style.fontSize = `${Math.random() * 1.5 + 0.8}rem`;
+    container.appendChild(h);
+  }
+}
+
+const splashLines = [
+  { text: `Hai ${CONFIG.loverName} ❤️`, delay: 200 },
+  { text: `Ada sesuatu yang ingin ${CONFIG.yourName} tunjukkan...`, delay: 1200 },
+  { text: `Sesuatu yang dibuat khusus untukmu.`, delay: 800 }
+];
+
+let typingLineIdx = 0;
+let typingCharIdx = 0;
+let typingPhase = 'type';
+
+function startTyping() {
+  setTimeout(typeLoop, 600);
+}
+
+function typeLoop() {
+  const el = document.getElementById('typed-content');
+  const line = splashLines[typingLineIdx];
+  if (!line) {
+    showSplashBtn();
+    return;
+  }
+  if (typingPhase === 'type') {
+    if (typingCharIdx <= line.text.length) {
+      el.textContent = line.text.slice(0, typingCharIdx);
+      typingCharIdx++;
+      setTimeout(typeLoop, 50 + Math.random() * 30);
+    } else {
+      typingPhase = 'wait';
+      setTimeout(typeLoop, line.delay);
+    }
+  } else if (typingPhase === 'wait') {
+    if (typingLineIdx < splashLines.length - 1) {
+      typingPhase = 'erase';
+      setTimeout(typeLoop, 50);
+    } else {
+      showSplashBtn();
+    }
+  } else if (typingPhase === 'erase') {
+    if (typingCharIdx > 0) {
+      typingCharIdx--;
+      el.textContent = line.text.slice(0, typingCharIdx);
+      setTimeout(typeLoop, 25);
+    } else {
+      typingLineIdx++;
+      typingPhase = 'type';
+      typingCharIdx = 0;
+      setTimeout(typeLoop, 300);
+    }
+  }
+}
+
+function showSplashBtn() {
+  document.getElementById('splash-btn').classList.add('visible');
+  // Show easter hint
+  setTimeout(() => { document.getElementById('easter-hint').classList.add('visible'); }, 3000);
+}
+
+function openGift() {
+  const burst = document.getElementById('light-burst');
+  burst.classList.add('flash');
+  triggerConfetti();
+  setTimeout(() => {
+    document.getElementById('splash').classList.add('hidden');
+    document.getElementById('main').classList.add('visible');
+    document.getElementById('nav').classList.add('visible');
+    document.getElementById('music-player').classList.add('visible');
+    burst.classList.remove('flash');
+    initMain();
+  }, 400);
+  setTimeout(() => { burst.classList.remove('flash'); }, 800);
+}
+
+// =============================
+// MAIN INIT
+// =============================
+function initMain() {
+  initHeroHearts();
+  setLetterDate();
+  initTimeline();
+  initGallery();
+  initCounter();
+  initReasons();
+  initMemories();
+  initQuiz();
+  initGame();
+  initMessages();
+  initWall();
+  initScrollReveal();
+  initEasterEgg();
+  checkBirthday();
+  initEndingTyping();
+}
+
+// =============================
+// HERO HEARTS
+// =============================
+function initHeroHearts() {
+  const container = document.getElementById('hero-hearts');
+  const emojis = ['❤️','💕','💖','💗','🌸','✨','💫','🌷'];
+  for (let i = 0; i < 20; i++) {
+    const h = document.createElement('div');
+    h.className = 'hero-heart';
+    h.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+    h.style.left = `${Math.random() * 100}%`;
+    h.style.animationDuration = `${Math.random() * 10 + 8}s`;
+    h.style.animationDelay = `${Math.random() * 8}s`;
+    h.style.fontSize = `${Math.random() * 1.2 + 0.6}rem`;
+    container.appendChild(h);
+  }
+}
+
+// =============================
+// LOVE LETTER
+// =============================
+function setLetterDate() {
+  const el = document.getElementById('letter-date');
+  const d = new Date();
+  el.textContent = d.toLocaleDateString('id-ID', {weekday:'long', year:'numeric', month:'long', day:'numeric'});
+}
+
+function openEnvelope() {
+  if (envelopeOpened) return;
+  envelopeOpened = true;
+  document.getElementById('env-flap').classList.add('open');
+  document.getElementById('env-seal').classList.add('open');
+  setTimeout(() => {
+    document.getElementById('letter-paper').classList.add('open');
+    document.getElementById('letter-paper').style.display = 'block';
+  }, 700);
+}
+
+// =============================
+// TIMELINE
+// =============================
+function initTimeline() {
+  const events = CONFIG.timelineEvents.length ? CONFIG.timelineEvents : defaultTimeline;
+  const container = document.getElementById('timeline');
+  events.forEach((e, i) => {
+    const item = document.createElement('div');
+    item.className = 'timeline-item';
+    item.style.transitionDelay = `${i * 0.1}s`;
+    item.innerHTML = `
+      <div class="timeline-dot">⭐</div>
+      <div class="timeline-card">
+        <div class="timeline-emoji">${e.emoji}</div>
+        <div class="timeline-title">${e.title}</div>
+        <div class="timeline-text">${e.text}</div>
+      </div>`;
+    container.appendChild(item);
+  });
+}
+
+// =============================
+// GALLERY
+// =============================
+const gallerySlides = [
+  { emoji: '📸', caption: 'Kenangan Pertama', sub: 'Awal dari segalanya ✨' },
+  { emoji: '🌙', caption: 'Malam yang Indah', sub: 'Begadang bareng buat ini 🌟' },
+  { emoji: '💕', caption: 'Momen Spesial', sub: 'Yang tidak akan terlupakan ❤️' },
+  { emoji: '🌸', caption: 'Hari-hari Bersama', sub: 'Setiap hari lebih berwarna 🌈' },
+  { emoji: '🎉', caption: 'Perayaan Kecil', sub: 'Kita selalu punya alasan untuk bahagia 🎊' }
+];
+
+function initGallery() {
+  const track = document.getElementById('gallery-track');
+  const dotsContainer = document.getElementById('gallery-dots');
+  const slides = CONFIG.galleryPhotos.length > 0 
+    ? CONFIG.galleryPhotos.map((p, i) => ({ photo: p, caption: `Kenangan ${i+1}`, sub: '❤️' }))
+    : gallerySlides;
+
+  slides.forEach((s, i) => {
+    const slide = document.createElement('div');
+    slide.className = 'gallery-slide';
+    if (s.photo) {
+      slide.style.backgroundImage = `url(${s.photo})`;
+      slide.style.backgroundSize = 'cover';
+      slide.style.backgroundPosition = 'center';
+    } else {
+      slide.innerHTML = `<div class="gallery-photo-placeholder"><span class="gallery-icon">${s.emoji || '📸'}</span><p style="color:var(--text-soft);font-size:0.9rem;">Tambahkan foto di CONFIG.galleryPhotos</p></div>`;
+    }
+    slide.innerHTML += `<div class="gallery-caption"><strong>${s.caption}</strong><p>${s.sub}</p></div>`;
+    track.appendChild(slide);
+
+    const dot = document.createElement('div');
+    dot.className = 'gallery-dot' + (i === 0 ? ' active' : '');
+    dot.onclick = () => goToSlide(i);
+    dotsContainer.appendChild(dot);
+  });
+
+  // Touch/drag support
+  let startX = 0, isDragging = false, startScrollLeft = 0;
+  track.addEventListener('mousedown', e => { isDragging = true; startX = e.pageX; });
+  track.addEventListener('mousemove', e => { if (!isDragging) return; e.preventDefault(); });
+  track.addEventListener('mouseup', e => {
+    if (!isDragging) return; isDragging = false;
+    const diff = e.pageX - startX;
+    if (Math.abs(diff) > 50) { diff < 0 ? galleryNext() : galleryPrev(); }
+  });
+  track.addEventListener('mouseleave', () => { isDragging = false; });
+
+  let touchStartX = 0;
+  track.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, {passive:true});
+  track.addEventListener('touchend', e => {
+    const diff = e.changedTouches[0].clientX - touchStartX;
+    if (Math.abs(diff) > 50) { diff < 0 ? galleryNext() : galleryPrev(); }
+  }, {passive:true});
+
+  galleryAutoplay = setInterval(galleryNext, 4000);
+}
+
+function goToSlide(idx) {
+  const track = document.getElementById('gallery-track');
+  const dots = document.querySelectorAll('.gallery-dot');
+  const total = track.children.length;
+  galleryIndex = (idx + total) % total;
+  track.style.transform = `translateX(-${galleryIndex * 100}%)`;
+  dots.forEach((d, i) => d.classList.toggle('active', i === galleryIndex));
+  clearInterval(galleryAutoplay);
+  galleryAutoplay = setInterval(galleryNext, 4000);
+}
+function galleryNext() { goToSlide(galleryIndex + 1); }
+function galleryPrev() { goToSlide(galleryIndex - 1); }
+
+// =============================
+// LOVE COUNTER
+// =============================
+function initCounter() {
+  updateCounter();
+  setInterval(updateCounter, 1000);
+}
+
+function updateCounter() {
+  const el = document.getElementById('counter-display');
+  const msgEl = document.getElementById('counter-msg');
+  if (!el) return;
+
+  let startDate;
+  if (CONFIG.relationshipDate) {
+    startDate = new Date(CONFIG.relationshipDate);
+  } else {
+    el.innerHTML = `<div style="grid-column:1/-1;color:rgba(255,255,255,0.5);font-style:italic;padding:1rem;">
+      Tambahkan tanggal di CONFIG.relationshipDate untuk menghitung waktu bersama ❤️
+    </div>`;
+    msgEl.textContent = '"Setiap detik bersamamu adalah hadiah." ❤️';
+    return;
+  }
+
+  const now = new Date();
+  const diff = now - startDate;
+  if (diff < 0) {
+    el.innerHTML = `<div style="grid-column:1/-1;color:rgba(255,255,255,0.5);">Menunggu hari yang dinantikan... ❤️</div>`;
+    return;
+  }
+
+  const days = Math.floor(diff / (1000*60*60*24));
+  const hours = Math.floor((diff % (1000*60*60*24)) / (1000*60*60));
+  const minutes = Math.floor((diff % (1000*60*60)) / (1000*60));
+  const seconds = Math.floor((diff % (1000*60)) / 1000);
+
+  const units = [
+    { val: days, label: 'HARI' },
+    { val: hours, label: 'JAM' },
+    { val: minutes, label: 'MENIT' },
+    { val: seconds, label: 'DETIK' }
+  ];
+
+  el.innerHTML = units.map(u => `
+    <div class="counter-unit">
+      <span class="counter-value">${String(u.val).padStart(2,'0')}</span>
+      <span class="counter-label">${u.label}</span>
+    </div>
+  `).join('');
+}
+
+// =============================
+// REASONS I LOVE YOU
+// =============================
+function initReasons() {
+  const reasons = CONFIG.loveReasons.length ? CONFIG.loveReasons : defaultReasons;
+  const grid = document.getElementById('reasons-grid');
+  reasons.forEach((r, i) => {
+    const card = document.createElement('div');
+    card.className = 'reason-card';
+    card.style.transitionDelay = `${(i % 8) * 0.05}s`;
+    card.innerHTML = `
+      <div class="reason-number">#${String(i+1).padStart(2,'0')}</div>
+      <span class="reason-emoji">${r.emoji}</span>
+      <div class="reason-text">${r.text}</div>`;
+    card.addEventListener('click', () => {
+      spawnHeartBurst(card);
+    });
+    grid.appendChild(card);
+  });
+}
+
+function spawnHeartBurst(el) {
+  const rect = el.getBoundingClientRect();
+  const cx = rect.left + rect.width/2;
+  const cy = rect.top + rect.height/2;
+  for (let i = 0; i < 8; i++) {
+    const heart = document.createElement('div');
+    heart.textContent = ['❤️','💕','💖'][Math.floor(Math.random()*3)];
+    heart.style.cssText = `
+      position:fixed;left:${cx}px;top:${cy}px;font-size:1.2rem;
+      pointer-events:none;z-index:3000;transition:all 0.8s ease-out;transform:translate(-50%,-50%);
+    `;
+    document.body.appendChild(heart);
+    const angle = (Math.PI * 2 * i / 8);
+    const dist = 60 + Math.random() * 40;
+    requestAnimationFrame(() => {
+      heart.style.transform = `translate(calc(-50% + ${Math.cos(angle)*dist}px), calc(-50% + ${Math.sin(angle)*dist}px)) scale(0)`;
+      heart.style.opacity = '0';
+    });
+    setTimeout(() => heart.remove(), 800);
+  }
+}
+
+// =============================
+// JAR OF MEMORIES
+// =============================
+function initMemories() {
+  memPool = CONFIG.memories.length ? [...CONFIG.memories] : [...defaultMemories];
+  memUsed = [];
+  updateJarCount();
+}
+
+function updateJarCount() {
+  const el = document.getElementById('jar-count');
+  if (el) el.textContent = `${memPool.length + memUsed.length} kenangan tersimpan dengan cinta 💕`;
+}
+
+function pickMemory() {
+  if (memPool.length === 0) {
+    memPool = [...memUsed];
+    memUsed = [];
+  }
+  const idx = Math.floor(Math.random() * memPool.length);
+  const mem = memPool.splice(idx, 1)[0];
+  memUsed.push(mem);
+
+  const icons = ['💝','💌','🌸','✨','🎀','💫','🌟','🥰','😊','🌷'];
+  document.getElementById('memory-icon').textContent = icons[Math.floor(Math.random()*icons.length)];
+  document.getElementById('memory-text').textContent = mem;
+  document.getElementById('memory-num').textContent = `Kenangan #${memUsed.length}`;
+  document.getElementById('memory-popup').classList.add('active');
+}
+
+function closeMemory() {
+  document.getElementById('memory-popup').classList.remove('active');
+}
+
+// =============================
+// QUIZ
+// =============================
+function initQuiz() {
+  quizCurrentQ = 0;
+  quizScore = 0;
+  renderQuizQuestion();
+}
+
+function renderQuizQuestion() {
+  const questions = CONFIG.quizQuestions.length ? CONFIG.quizQuestions : defaultQuiz;
+  const bar = document.getElementById('quiz-bar');
+  const content = document.getElementById('quiz-content');
+
+  if (quizCurrentQ >= questions.length) {
+    renderQuizResult();
+    return;
+  }
+
+  const q = questions[quizCurrentQ];
+  bar.style.width = `${(quizCurrentQ / questions.length) * 100}%`;
+
+  content.innerHTML = `
+    <div class="quiz-q-num">Pertanyaan ${quizCurrentQ + 1} dari ${questions.length}</div>
+    <div class="quiz-question">${q.q}</div>
+    <div class="quiz-options" id="quiz-opts"></div>`;
+
+  const opts = document.getElementById('quiz-opts');
+  q.opts.forEach((opt, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'quiz-option';
+    btn.innerHTML = `<span class="quiz-option-icon">${opt.icon}</span>${opt.text}`;
+    btn.onclick = () => selectAnswer(btn, i, q);
+    opts.appendChild(btn);
+  });
+}
+
+function selectAnswer(btn, idx, q) {
+  document.querySelectorAll('.quiz-option').forEach(b => b.disabled = true);
+  btn.classList.add('correct');
+
+  const resultDiv = document.createElement('div');
+  resultDiv.className = 'quiz-result';
+  resultDiv.style.display = 'block';
+  resultDiv.innerHTML = `
+    <div class="quiz-result-emoji">🎉</div>
+    <div class="quiz-result-title">Benar! ✨</div>
+    <div class="quiz-result-text">${q.result}</div>
+    ${quizCurrentQ < (CONFIG.quizQuestions.length || defaultQuiz.length) - 1
+      ? `<button class="quiz-next-btn" onclick="nextQuizQ()">Pertanyaan Berikutnya →</button>`
+      : `<button class="quiz-next-btn" onclick="nextQuizQ()">Lihat Hasil Final 🎊</button>`}
+  `;
+  document.getElementById('quiz-content').appendChild(resultDiv);
+  triggerConfetti(true);
+  quizScore++;
+}
+
+function nextQuizQ() {
+  quizCurrentQ++;
+  renderQuizQuestion();
+}
+
+function renderQuizResult() {
+  document.getElementById('quiz-bar').style.width = '100%';
+  document.getElementById('quiz-content').innerHTML = `
+    <div class="quiz-result" style="display:block;">
+      <div class="quiz-result-emoji">🏆</div>
+      <div class="quiz-result-title">Frall Berhasil! ❤️</div>
+      <div class="quiz-result-text">
+        Kamu menyelesaikan semua pertanyaan!<br>
+        Dan semua jawaban Frall... semuanya benar!<br>
+        Karena apapun yang Frall rasakan tentang Liam, itu sudah pasti indah. 💕
+      </div>
+      <button class="quiz-restart-btn" onclick="initQuiz()">Main Lagi 🔄</button>
+    </div>`;
+  triggerConfetti();
+}
+
+// =============================
+// HEART GAME
+// =============================
+function initGame() {
+  gameCanvas = document.getElementById('heart-canvas');
+  gameCtx = gameCanvas.getContext('2d');
+
+  // Scale canvas for device pixel ratio
+  const dpr = window.devicePixelRatio || 1;
+  const rect = gameCanvas.getBoundingClientRect();
+  const w = Math.min(500, window.innerWidth - 40);
+  const h = 320;
+  gameCanvas.style.width = w + 'px';
+  gameCanvas.style.height = h + 'px';
+  gameCanvas.width = w * dpr;
+  gameCanvas.height = h * dpr;
+  gameCtx.scale(dpr, dpr);
+  gameCanvas.dataset.w = w;
+  gameCanvas.dataset.h = h;
+
+  drawGameIdle();
+
+  gameCanvas.addEventListener('click', handleGameClick);
+  gameCanvas.addEventListener('touchstart', e => {
+    e.preventDefault();
+    const touch = e.touches[0];
+    const rect = gameCanvas.getBoundingClientRect();
+    handleGameClickAt(touch.clientX - rect.left, touch.clientY - rect.top);
+  }, {passive:false});
+}
+
+function drawGameIdle() {
+  const w = +gameCanvas.dataset.w;
+  const h = +gameCanvas.dataset.h;
+  gameCtx.clearRect(0, 0, w, h);
+  gameCtx.fillStyle = 'rgba(253, 232, 242, 0.5)';
+  gameCtx.fillRect(0, 0, w, h);
+  gameCtx.font = '3rem serif';
+  gameCtx.textAlign = 'center';
+  gameCtx.fillText('💕', w/2, h/2 - 10);
+  gameCtx.font = '1rem Nunito, sans-serif';
+  gameCtx.fillStyle = 'rgba(74,37,53,0.4)';
+  gameCtx.fillText('Tekan Mulai!', w/2, h/2 + 30);
+}
+
+function startGame() {
+  if (gameActive) return;
+  gameActive = true;
+  gameScore = 0;
+  gameCombo = 1;
+  gameTimer = 30;
+  gameMissed = 0;
+  hearts = [];
+  document.getElementById('game-score').textContent = '0';
+  document.getElementById('game-combo').textContent = 'x1';
+  document.getElementById('game-time').textContent = '30';
+  document.getElementById('game-msg').textContent = 'Tangkap semua hati! 💕';
+  document.getElementById('game-btn').disabled = true;
+
+  gameTimerInterval = setInterval(() => {
+    gameTimer--;
+    document.getElementById('game-time').textContent = gameTimer;
+    if (gameTimer <= 0) endGame();
+  }, 1000);
+
+  spawnHeart();
+  gameLoop();
+}
+
+function spawnHeart() {
+  if (!gameActive) return;
+  const w = +gameCanvas.dataset.w;
+  const sizes = ['❤️','💕','💖','💗','🌸'];
+  hearts.push({
+    x: Math.random() * (w - 40) + 20,
+    y: -30,
+    size: 24 + Math.random() * 16,
+    speed: 1 + Math.random() * 2 + (30 - gameTimer) * 0.05,
+    emoji: sizes[Math.floor(Math.random() * sizes.length)],
+    id: Date.now() + Math.random()
+  });
+  const delay = Math.max(400, 1200 - (30 - gameTimer) * 20);
+  if (gameActive) setTimeout(spawnHeart, delay);
+}
+
+function gameLoop() {
+  if (!gameActive) return;
+  const w = +gameCanvas.dataset.w;
+  const h = +gameCanvas.dataset.h;
+  gameCtx.clearRect(0, 0, w, h);
+
+  // BG
+  const grad = gameCtx.createLinearGradient(0, 0, 0, h);
+  grad.addColorStop(0, 'rgba(253,232,242,0.8)');
+  grad.addColorStop(1, 'rgba(240,236,255,0.8)');
+  gameCtx.fillStyle = grad;
+  gameCtx.fillRect(0, 0, w, h);
+
+  hearts = hearts.filter(heart => {
+    heart.y += heart.speed;
+    gameCtx.font = `${heart.size}px serif`;
+    gameCtx.textAlign = 'center';
+    gameCtx.textBaseline = 'middle';
+    gameCtx.fillText(heart.emoji, heart.x, heart.y);
+    if (heart.y > h + 20) {
+      gameMissed++;
+      gameCombo = 1;
+      document.getElementById('game-combo').textContent = 'x1';
+      return false;
+    }
+    return true;
+  });
+
+  requestAnimationFrame(gameLoop);
+}
+
+function handleGameClick(e) {
+  const rect = gameCanvas.getBoundingClientRect();
+  handleGameClickAt(e.clientX - rect.left, e.clientY - rect.top);
+}
+
+function handleGameClickAt(cx, cy) {
+  if (!gameActive) return;
+  let caught = false;
+  hearts = hearts.filter(heart => {
+    const dist = Math.hypot(cx - heart.x, cy - heart.y);
+    if (dist < heart.size) {
+      caught = true;
+      gameScore += gameCombo;
+      gameCombo = Math.min(gameCombo + 1, 5);
+      document.getElementById('game-score').textContent = gameScore;
+      document.getElementById('game-combo').textContent = `x${gameCombo}`;
+      showCatchEffect(cx, cy);
+      return false;
+    }
+    return true;
+  });
+  if (!caught) { gameCombo = 1; document.getElementById('game-combo').textContent = 'x1'; }
+}
+
+function showCatchEffect(x, y) {
+  // Draw sparkle
+  const sparkles = ['✨','💖','⭐'];
+  const el = document.createElement('div');
+  el.style.cssText = `position:fixed;left:${x}px;top:${y}px;font-size:1.5rem;pointer-events:none;z-index:4000;transform:translate(-50%,-50%);transition:all 0.5s;`;
+  el.textContent = sparkles[Math.floor(Math.random()*sparkles.length)];
+  document.body.appendChild(el);
+  // position relative to canvas
+  const rect = gameCanvas.getBoundingClientRect();
+  el.style.left = (rect.left + x) + 'px';
+  el.style.top = (rect.top + y) + 'px';
+  requestAnimationFrame(() => {
+    el.style.transform = 'translate(-50%, -100%) scale(1.5)';
+    el.style.opacity = '0';
+  });
+  setTimeout(() => el.remove(), 500);
+}
+
+function endGame() {
+  gameActive = false;
+  clearInterval(gameTimerInterval);
+  hearts = [];
+
+  const w = +gameCanvas.dataset.w;
+  const h = +gameCanvas.dataset.h;
+  gameCtx.clearRect(0, 0, w, h);
+  const grad = gameCtx.createLinearGradient(0, 0, w, h);
+  grad.addColorStop(0, 'rgba(253,232,242,0.9)');
+  grad.addColorStop(1, 'rgba(240,236,255,0.9)');
+  gameCtx.fillStyle = grad;
+  gameCtx.fillRect(0, 0, w, h);
+  gameCtx.textAlign = 'center';
+  gameCtx.font = 'bold 2rem Playfair Display, serif';
+  gameCtx.fillStyle = '#c94878';
+  gameCtx.fillText(`Skor: ${gameScore} ❤️`, w/2, h/2 - 20);
+  gameCtx.font = '1rem Nunito, sans-serif';
+  gameCtx.fillStyle = 'rgba(74,37,53,0.6)';
+  gameCtx.fillText('Frall berhasil menangkap hati Liam!', w/2, h/2 + 20);
+
+  const msg = gameScore >= 50 ? `Luar biasa! ${gameScore} hati tertangkap — sama dengan betapa besar cinta Liam untuk Frall! 💕` :
+              gameScore >= 20 ? `Keren! ${gameScore} hati berhasil Frall tangkap! 🌟 Coba lagi untuk dapat lebih banyak!` :
+              `${gameScore} hati tertangkap! Latihan lagi ya — tapi ingat, cinta Liam sudah pasti 100% untukmu! ❤️`;
+
+  document.getElementById('game-msg').textContent = msg;
+  document.getElementById('game-btn').disabled = false;
+  document.getElementById('game-btn').textContent = 'Main Lagi 🔄';
+  document.getElementById('game-btn').onclick = () => {
+    document.getElementById('game-btn').textContent = 'Mulai Game 💖';
+    document.getElementById('game-btn').onclick = startGame;
+    drawGameIdle(); startGame();
+  };
+
+  if (gameScore >= 30) triggerConfetti();
+}
+
+// =============================
+// BIRTHDAY CHECK
+// =============================
+function checkBirthday() {
+  if (!CONFIG.birthdayDate) return;
+  const [mm, dd] = CONFIG.birthdayDate.split('-');
+  const today = new Date();
+  if (today.getMonth() + 1 === +mm && today.getDate() === +dd) {
+    setTimeout(() => {
+      triggerConfetti();
+      document.getElementById('birthday').scrollIntoView({behavior:'smooth'});
+    }, 2000);
+  }
+}
+
+// =============================
+// MUSIC PLAYER
+// =============================
+function toggleMusic() {
+  musicExpanded = !musicExpanded;
+  document.getElementById('music-panel').classList.toggle('open', musicExpanded);
+  document.getElementById('music-toggle').style.display = musicExpanded ? 'none' : 'flex';
+  document.getElementById('music-panel').style.display = musicExpanded ? 'block' : 'none';
+  if (!musicExpanded) document.getElementById('music-toggle').style.display = 'flex';
+  
+  if (!document.getElementById('music-panel').classList.contains('open')) {
+    document.getElementById('music-toggle').style.display = 'flex';
+  }
+}
+
+// Simplified toggle
+document.getElementById('music-toggle').onclick = function() {
+  const panel = document.getElementById('music-panel');
+  const isOpen = panel.classList.contains('open');
+  panel.classList.toggle('open');
+  this.style.display = isOpen ? 'flex' : 'none';
+  if (!isOpen) this.style.display = 'none';
+};
+
+document.getElementById('music-panel').querySelector('.music-note-msg').onclick = function() {
+  const panel = document.getElementById('music-panel');
+  panel.classList.remove('open');
+  document.getElementById('music-toggle').style.display = 'flex';
+};
+
+function playPauseMusic() {
+  if (!CONFIG.musicFile) {
+    document.getElementById('music-title').textContent = 'Tambahkan musik 🎵';
+    document.getElementById('music-artist').textContent = 'di CONFIG.musicFile';
+    return;
+  }
+  if (!audioEl) {
+    audioEl = new Audio(CONFIG.musicFile);
+    audioEl.loop = true;
+    audioEl.addEventListener('timeupdate', () => {
+      const pct = audioEl.duration ? (audioEl.currentTime / audioEl.duration) * 100 : 0;
+      document.getElementById('music-fill').style.width = pct + '%';
+    });
+  }
+  if (musicPlaying) {
+    audioEl.pause();
+    musicPlaying = false;
+    document.getElementById('music-play-btn').textContent = '▶';
+    document.getElementById('music-disc').classList.remove('playing');
+  } else {
+    audioEl.play().catch(() => {});
+    musicPlaying = true;
+    document.getElementById('music-play-btn').textContent = '⏸';
+    document.getElementById('music-disc').classList.add('playing');
+  }
+}
+function prevTrack() { playPauseMusic(); }
+function nextTrack() { playPauseMusic(); }
+function seekMusic(e) {
+  if (!audioEl || !audioEl.duration) return;
+  const rect = e.currentTarget.getBoundingClientRect();
+  const pct = (e.clientX - rect.left) / rect.width;
+  audioEl.currentTime = pct * audioEl.duration;
+}
+
+// =============================
+// RANDOM LOVE MESSAGES
+// =============================
+function initMessages() {
+  msgPool = CONFIG.loveMessages.length ? [...CONFIG.loveMessages] : [...defaultMessages];
+  msgUsed = [];
+}
+
+function showMessage() {
+  if (msgPool.length === 0) { msgPool = [...msgUsed]; msgUsed = []; }
+  const idx = Math.floor(Math.random() * msgPool.length);
+  const msg = msgPool.splice(idx, 1)[0];
+  msgUsed.push(msg);
+
+  const el = document.getElementById('msg-display');
+  el.classList.add('fade');
+  setTimeout(() => {
+    el.textContent = msg;
+    el.classList.remove('fade');
+    document.getElementById('msg-count').textContent = `Pesan ${msgUsed.length} dari ${msgPool.length + msgUsed.length} ❤️`;
+  }, 400);
+  spawnFloatingHeart();
+}
+
+function spawnFloatingHeart() {
+  const el = document.createElement('div');
+  const hearts = ['❤️','💕','💖','💗','🌸'];
+  el.textContent = hearts[Math.floor(Math.random() * hearts.length)];
+  el.style.cssText = `
+    position:fixed;left:${Math.random()*80+10}%;bottom:20%;
+    font-size:${Math.random()*1.5+1}rem;pointer-events:none;z-index:1000;
+    animation:floatHeart ${Math.random()*3+3}s ease-out forwards;
+  `;
+  document.body.appendChild(el);
+  setTimeout(() => el.remove(), 5000);
+}
+
+// =============================
+// WALL OF REASONS
+// =============================
+function initWall() {
+  const wall = document.getElementById('sticky-wall');
+  const rotations = [-8,-5,-3,-1,0,1,3,5,8];
+  defaultWallNotes.forEach((note, i) => {
+    const sticky = document.createElement('div');
+    sticky.className = 'sticky-note reveal';
+    sticky.style.background = note.color;
+    sticky.style.transform = `rotate(${rotations[i % rotations.length]}deg)`;
+    sticky.style.transitionDelay = `${(i % 6) * 0.07}s`;
+    sticky.innerHTML = `<span class="sticky-pin">📌</span>${note.text}`;
+    sticky.addEventListener('click', () => {
+      sticky.style.transform = `rotate(0deg) scale(1.1)`;
+      setTimeout(() => { sticky.style.transform = `rotate(${rotations[i % rotations.length]}deg) scale(1)`; }, 300);
+    });
+    wall.appendChild(sticky);
+  });
+}
+
+// =============================
+// LOVE METER
+// =============================
+function startMeter() {
+  meterStep = 0;
+  animateMeter();
+}
+
+function animateMeter() {
+  const bar = document.getElementById('meter-bar');
+  const val = document.getElementById('meter-val');
+  const msg = document.getElementById('meter-msg');
+
+  const steps = [
+    { pct: 5, val: '0%', msg: 'Menginisialisasi...' },
+    { pct: 15, val: '10%', msg: 'Membaca sinyal hati...' },
+    { pct: 30, val: '25%', msg: 'Mengkalibrasi sensor cinta...' },
+    { pct: 55, val: '50%', msg: 'Memproses data...' },
+    { pct: 80, val: '75%', msg: 'Menghitung lebih lanjut...' },
+    { pct: 100, val: '100%', msg: 'Mencapai batas maksimum...' },
+    { pct: 100, val: '999%', msg: '⚠️ OVERFLOW DETECTED' },
+    { pct: 100, val: '∞', msg: '❌ ERROR: Cinta Liam untuk Frall terlalu besar untuk dihitung ❤️' }
+  ];
+
+  if (meterStep >= steps.length) return;
+  const s = steps[meterStep];
+  bar.style.width = s.pct + '%';
+  val.textContent = s.val;
+  msg.textContent = s.msg;
+
+  if (meterStep === steps.length - 1) {
+    triggerConfetti(true);
+    val.style.background = 'linear-gradient(135deg, var(--pink-dark), var(--champagne))';
+    val.style.webkitBackgroundClip = 'text';
+    val.style.webkitTextFillColor = 'transparent';
+  }
+
+  meterStep++;
+  if (meterStep < steps.length) {
+    setTimeout(animateMeter, meterStep < 6 ? 700 : 400);
+  }
+}
+
+// =============================
+// EASTER EGG
+// =============================
+function initEasterEgg() {
+  document.addEventListener('keypress', e => {
+    easterKeyBuffer += e.key.toUpperCase();
+    if (easterKeyBuffer.length > 10) easterKeyBuffer = easterKeyBuffer.slice(-10);
+    document.getElementById('easter-hint').textContent = `[ ${easterKeyBuffer}_  ]`;
+    if (easterKeyBuffer.includes('I LOVE YOU') || easterKeyBuffer.endsWith('I LOVE YOU')) {
+      triggerEasterEgg();
+    }
+  });
+}
+
+function triggerEasterEgg() {
+  easterKeyBuffer = '';
+  document.getElementById('easter-egg-overlay').classList.add('active');
+  triggerHeartRain();
+  triggerConfetti();
+}
+
+function closeEasterEgg() {
+  document.getElementById('easter-egg-overlay').classList.remove('active');
+}
+
+function triggerHeartRain() {
+  for (let i = 0; i < 30; i++) {
+    setTimeout(() => {
+      const h = document.createElement('div');
+      h.textContent = ['❤️','💕','💖','💗','🌸','✨'][Math.floor(Math.random()*6)];
+      h.style.cssText = `
+        position:fixed;left:${Math.random()*100}%;top:-30px;font-size:${Math.random()*2+1}rem;
+        pointer-events:none;z-index:7500;animation:floatHeart ${Math.random()*4+3}s linear forwards;
+      `;
+      document.body.appendChild(h);
+      setTimeout(() => h.remove(), 6000);
+    }, i * 100);
+  }
+}
+
+// =============================
+// HUG OVERLAY
+// =============================
+function triggerHug() {
+  document.getElementById('hug-overlay').classList.add('active');
+  triggerHugParticles();
+  triggerConfetti();
+}
+
+function triggerHugParticles() {
+  const canvas = document.getElementById('hug-canvas');
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  const ctx = canvas.getContext('2d');
+  const particles = [];
+  const emojis = ['❤️','💕','💖','💗','🌸','✨','💫','🌟'];
+
+  for (let i = 0; i < 40; i++) {
+    particles.push({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      vx: (Math.random() - 0.5) * 3,
+      vy: (Math.random() - 0.5) * 3 - 1,
+      emoji: emojis[Math.floor(Math.random() * emojis.length)],
+      size: Math.random() * 1.5 + 0.8,
+      alpha: 1,
+      decay: 0.005 + Math.random() * 0.01
+    });
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    let alive = false;
+    particles.forEach(p => {
+      p.x += p.vx;
+      p.y += p.vy;
+      p.vy += 0.05;
+      p.alpha -= p.decay;
+      if (p.alpha > 0) {
+        alive = true;
+        ctx.globalAlpha = p.alpha;
+        ctx.font = `${p.size * 30}px serif`;
+        ctx.textAlign = 'center';
+        ctx.fillText(p.emoji, p.x, p.y);
+      }
+    });
+    ctx.globalAlpha = 1;
+    if (alive) requestAnimationFrame(draw);
+  }
+  draw();
+}
+
+function closeHug() {
+  document.getElementById('hug-overlay').classList.remove('active');
+}
+
+// =============================
+// CONFETTI
+// =============================
+const confCanvas = document.getElementById('confetti-canvas');
+const confCtx = confCanvas.getContext('2d');
+let confParticles = [];
+let confActive = false;
+let confTimer;
+
+function triggerConfetti(small = false) {
+  confCanvas.style.display = 'block';
+  confCanvas.width = window.innerWidth;
+  confCanvas.height = window.innerHeight;
+
+  const count = small ? 60 : 150;
+  const colors = ['#f9a8c4','#c5b4ec','#dcc078','#c94878','#9b6dda','#ffd6e8','#a8e0d4'];
+  for (let i = 0; i < count; i++) {
+    confParticles.push({
+      x: Math.random() * confCanvas.width,
+      y: -20,
+      vx: (Math.random() - 0.5) * 6,
+      vy: Math.random() * 5 + 2,
+      color: colors[Math.floor(Math.random() * colors.length)],
+      size: Math.random() * 8 + 4,
+      rotation: Math.random() * 360,
+      rotSpeed: (Math.random() - 0.5) * 5,
+      shape: Math.random() > 0.5 ? 'rect' : 'circle'
+    });
+  }
+
+  if (!confActive) { confActive = true; animateConfetti(); }
+  clearTimeout(confTimer);
+  confTimer = setTimeout(() => {
+    confActive = false;
+    confCanvas.style.display = 'none';
+    confParticles = [];
+  }, 4000);
+}
+
+function animateConfetti() {
+  if (!confActive) return;
+  confCtx.clearRect(0, 0, confCanvas.width, confCanvas.height);
+  confParticles = confParticles.filter(p => {
+    p.x += p.vx;
+    p.y += p.vy;
+    p.vy += 0.15;
+    p.rotation += p.rotSpeed;
+    if (p.y > confCanvas.height + 20) return false;
+    confCtx.save();
+    confCtx.translate(p.x, p.y);
+    confCtx.rotate(p.rotation * Math.PI / 180);
+    confCtx.fillStyle = p.color;
+    if (p.shape === 'circle') {
+      confCtx.beginPath();
+      confCtx.arc(0, 0, p.size/2, 0, Math.PI*2);
+      confCtx.fill();
+    } else {
+      confCtx.fillRect(-p.size/2, -p.size/4, p.size, p.size/2);
+    }
+    confCtx.restore();
+    return true;
+  });
+  requestAnimationFrame(animateConfetti);
+}
+
+// =============================
+// ENDING TYPING
+// =============================
+function initEndingTyping() {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting && !endingTyped) {
+        endingTyped = true;
+        startEndingTyping();
+      }
+    });
+  }, { threshold: 0.5 });
+  const endingTypedEl = document.getElementById('ending-typed');
+  if (endingTypedEl) observer.observe(endingTypedEl);
+}
+
+function startEndingTyping() {
+  const text = `"Aku akan selalu bersyukur karena pernah mengenal dan menyayangimu ❤️"`;
+  const el = document.getElementById('ending-typed-content');
+  let i = 0;
+  function type() {
+    if (i <= text.length) {
+      el.textContent = text.slice(0, i);
+      i++;
+      setTimeout(type, 50 + Math.random() * 30);
+    }
+  }
+  setTimeout(type, 800);
+}
+
+// =============================
+// SCROLL REVEAL
+// =============================
+function initScrollReveal() {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('revealed');
+        // Update nav dots
+        const section = e.target.closest('section');
+        if (section) updateNavDots(section.id);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+  document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .timeline-item').forEach(el => {
+    observer.observe(el);
+  });
+}
+
+function updateNavDots(sectionId) {
+  const sectionOrder = ['hero','love-letter','story','gallery','counter','reasons','jar','quiz','game','messages','ending'];
+  const idx = sectionOrder.indexOf(sectionId);
+  if (idx === -1) return;
+  document.querySelectorAll('.nav-dot').forEach((d, i) => {
+    d.classList.toggle('active', i === idx);
+  });
+}
+
+// =============================
+// SCROLL NAV HELPER
+// =============================
+function scrollTo(id) {
+  const el = document.querySelector(id);
+  if (el) el.scrollIntoView({ behavior: 'smooth' });
+}
+
+// =============================
+// WINDOW RESIZE
+// =============================
+window.addEventListener('resize', () => {
+  if (gameCanvas) {
+    const w = Math.min(500, window.innerWidth - 40);
+    const h = 320;
+    const dpr = window.devicePixelRatio || 1;
+    gameCanvas.style.width = w + 'px';
+    gameCanvas.style.height = h + 'px';
+    gameCanvas.width = w * dpr;
+    gameCanvas.height = h * dpr;
+    gameCtx.scale(dpr, dpr);
+    gameCanvas.dataset.w = w;
+    gameCanvas.dataset.h = h;
+    if (!gameActive) drawGameIdle();
+  }
+}, { passive: true });
+
+// =============================
+// INIT
+// =============================
+window.addEventListener('load', () => {
+  initSplash();
+  // Close memory popup on overlay click
+  document.getElementById('memory-popup').addEventListener('click', e => {
+    if (e.target === document.getElementById('memory-popup')) closeMemory();
+  });
+  // Close easter egg on overlay click
+  document.getElementById('easter-egg-overlay').addEventListener('click', e => {
+    if (e.target === document.getElementById('easter-egg-overlay')) closeEasterEgg();
+  });
+  // Close hug on overlay click
+  document.getElementById('hug-overlay').addEventListener('click', e => {
+    if (e.target === document.getElementById('hug-overlay')) closeHug();
+  });
+});
+</script>
+</body>
+</html>
