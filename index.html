@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>For My Sayang, Frall ♡</title>
+<meta name="description" content="A little place on the internet, just for us.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Caveat:wght@500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ================= THREAD (signature element) ================= -->
+<svg id="thread-svg" aria-hidden="true">
+  <path id="thread-path" d="" />
+</svg>
+
+<!-- ================= OPENING ================= -->
+<section id="opening" class="screen" aria-label="Opening">
+  <div class="opening-inner">
+    <p class="eyebrow fade-in">a little something for</p>
+    <h1 class="opening-title fade-in delay-1">For my Sayang,<br><span class="script">Frall ♡</span></h1>
+    <p class="opening-sub fade-in delay-2">I made a little place on the internet…<br>just for us.</p>
+    <button id="open-story-btn" class="btn-primary fade-in delay-3">Open Our Story ♡</button>
+  </div>
+  <div class="opening-hearts" id="opening-hearts" aria-hidden="true"></div>
+</section>
+
+<!-- ================= MAIN SITE (hidden until opened) ================= -->
+<div id="main-site" hidden>
+
+  <!-- NAV -->
+  <nav id="navbar" class="navbar">
+    <div class="nav-inner">
+      <a href="#home" class="nav-brand">L <span aria-hidden="true">♡</span> F</a>
+      <button id="nav-toggle" class="nav-toggle" aria-label="Buka menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
+      <ul id="nav-links" class="nav-links">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#our-story" class="nav-link">Our Story</a></li>
+        <li><a href="#memories" class="nav-link">Memories</a></li>
+        <li><a href="#little-things" class="nav-link">Little Things</a></li>
+        <li><a href="#love-letter" class="nav-link">Love Letter</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HOME / GREETING -->
+  <section id="home" class="section section--dreamy-pink">
+    <div class="container narrow center">
+      <p class="reveal eyebrow">Hi, Sayang.</p>
+      <h2 class="reveal section-title">Sebelum kamu menjelajahi tempat kecil ini,</h2>
+      <p class="reveal body-text">aku cuma mau kamu tahu…<br>setiap bagian kecil dari ini dibuat sambil memikirkan kamu.</p>
+      <div class="scroll-cue reveal" aria-hidden="true">
+        <span></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUR TIME -->
+  <section id="our-time" class="section section--cream">
+    <div class="container narrow center">
+      <p class="reveal eyebrow">Our Time</p>
+      <h2 class="reveal section-title">We've been us for…</h2>
+      <div id="timer" class="timer reveal" role="timer" aria-live="off">
+        <div class="timer-unit"><span id="t-days" class="timer-num">0</span><span class="timer-label">Days</span></div>
+        <div class="timer-unit"><span id="t-hours" class="timer-num">0</span><span class="timer-label">Hours</span></div>
+        <div class="timer-unit"><span id="t-mins" class="timer-num">0</span><span class="timer-label">Minutes</span></div>
+        <div class="timer-unit"><span id="t-secs" class="timer-num">0</span><span class="timer-label">Seconds</span></div>
+      </div>
+      <p class="reveal timer-since" id="easter-date">since <button class="date-btn" id="date-easter-btn" aria-label="27 May 2026">27 May 2026</button></p>
+    </div>
+  </section>
+
+  <!-- ANNIVERSARY -->
+  <section id="anniversary" class="section section--lavender">
+    <div class="container narrow center">
+      <p class="reveal eyebrow">Our Next Little Milestone</p>
+      <h2 class="reveal section-title">Next Anniversary</h2>
+      <p class="reveal anniv-date">27 May</p>
+      <p class="reveal"><span id="anniv-days" class="anniv-count">0</span> days to go ♡</p>
+    </div>
+  </section>
+
+  <!-- OUR BEGINNING -->
+  <section id="beginning" class="section section--cream">
+    <div class="container narrow">
+      <p class="reveal eyebrow center">Where It All Started</p>
+      <h2 class="reveal section-title center">27 May 2026</h2>
+      <div class="scrap-card reveal">
+        <div class="chat-hint" aria-hidden="true">
+          <span class="chat-bubble chat-bubble--in">hai, kok tumben chat 👀</span>
+          <span class="chat-bubble chat-bubble--out">iseng aja, boleh kan?</span>
+        </div>
+        <p class="body-text">
+          Kami bertemu bukan di suatu tempat yang bisa ditunjuk di peta —
+          tapi di sebuah grup WhatsApp, di antara notifikasi yang datang dan pergi.
+          Dari sana, obrolan biasa perlahan berubah jadi sesuatu yang berarti.
+        </p>
+        <p class="body-text handwritten">We met virtually. But somehow, you became real in all the ways that mattered.</p>
+      </div>
+      <div class="tape tape--top-left" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <!-- OUR STORY -->
+  <section id="our-story" class="section section--soft-pink">
+    <div class="container">
+      <p class="reveal eyebrow center">Our Little Story</p>
+      <h2 class="reveal section-title center">Our Little Story</h2>
+      <div class="story-grid">
+        <article class="story-card reveal">
+          <p class="story-chapter">Chapter 01</p>
+          <h3 class="story-title">A Random Beginning</h3>
+          <p class="story-text">Dari sekian banyak grup WhatsApp yang ramai, entah bagaimana satu obrolan kecil justru menempel dan nggak hilang begitu saja.</p>
+        </article>
+        <article class="story-card reveal">
+          <p class="story-chapter">Chapter 02</p>
+          <h3 class="story-title">Somehow, We Got Closer</h3>
+          <p class="story-text">Percakapan yang tadinya biasa saja, pelan-pelan jadi sesuatu yang dinanti. Sampai akhirnya, pada 27 Mei 2026, kami memutuskan untuk saling menjaga.</p>
+        </article>
+        <article class="story-card reveal">
+          <p class="story-chapter">Chapter 03</p>
+          <h3 class="story-title">The Little Things</h3>
+          <p class="story-text">Bukan momen besar yang membuat ini terasa spesial, tapi hal-hal kecil — ngobrol, ketawa bareng, dan waktu yang dihabiskan tanpa harus melakukan apa-apa.</p>
+        </article>
+        <article class="story-card reveal">
+          <p class="story-chapter">Chapter 04</p>
+          <h3 class="story-title">Us</h3>
+          <p class="story-text">Dan sekarang, di sinilah kita — masih saling belajar, masih saling menjaga, masih memilih satu sama lain.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- MEMORIES / GALLERY -->
+  <section id="memories" class="section section--cream">
+    <div class="container">
+      <p class="reveal eyebrow center">Digital Scrapbook</p>
+      <h2 class="reveal section-title center">A Few Little Moments</h2>
+      <div class="gallery" id="gallery"></div>
+    </div>
+  </section>
+
+  <!-- LITTLE THINGS -->
+  <section id="little-things" class="section section--soft-pink">
+    <div class="container narrow">
+      <p class="reveal eyebrow center">It's The Little Things</p>
+      <h2 class="reveal section-title center">Yang paling berarti bukan selalu yang besar</h2>
+      <p class="reveal body-text center">Buat aku, momen sederhana justru yang bikin kita makin dekat dan nyaman satu sama lain.</p>
+      <div class="little-grid" id="little-grid"></div>
+      <p class="reveal handwritten center little-tagline">The little things became the big things.</p>
+    </div>
+  </section>
+
+  <!-- WHY YOU -->
+  <section id="why-you" class="section section--lavender">
+    <div class="container narrow">
+      <p class="reveal eyebrow center">Why You?</p>
+      <h2 class="reveal section-title center">Denganmu, aku bisa jadi diriku sendiri</h2>
+      <div class="why-grid" id="why-grid"></div>
+    </div>
+  </section>
+
+  <!-- LOVE LETTER -->
+  <section id="love-letter" class="section section--paper">
+    <div class="container narrow">
+      <p class="reveal eyebrow center">A Letter For My Sayang</p>
+      <div class="letter reveal">
+        <p class="letter-greeting">Dear Sayang,</p>
+        <p>Terima kasih sudah hadir dan menjadi seseorang yang bisa membuatku merasa nyaman menjadi diriku sendiri.</p>
+        <p>Aku mungkin nggak selalu pandai mengungkapkan perasaanku, tapi aku sangat menghargai keberadaanmu.</p>
+        <p>Semoga kita bisa terus saling memahami, menjaga, dan menjadi tempat nyaman satu sama lain. ❤️</p>
+        <p class="letter-signature">Love,<br>Liam ♡</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BIRTHDAYS -->
+  <section id="birthdays" class="section section--cream">
+    <div class="container narrow center">
+      <p class="reveal eyebrow">Two Special Days</p>
+      <h2 class="reveal section-title">Worth Celebrating</h2>
+      <div class="bday-grid">
+        <button class="bday-card reveal bday-btn" data-name="Liam">
+          <span class="bday-name">Liam</span>
+          <span class="bday-date">13 September</span>
+        </button>
+        <button class="bday-card reveal bday-btn" data-name="Frall">
+          <span class="bday-name">Frall</span>
+          <span class="bday-date">13 October</span>
+        </button>
+      </div>
+      <p class="bday-msg" id="bday-msg" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <!-- ENVELOPE SURPRISE -->
+  <section id="envelope-section" class="section section--dreamy-dark">
+    <div class="container narrow center">
+      <p class="reveal envelope-lead">Wait… there's one more thing.</p>
+      <div class="envelope-wrap reveal">
+        <div id="envelope" class="envelope">
+          <div class="envelope-flap"></div>
+          <div class="envelope-body"></div>
+          <div class="envelope-paper" id="envelope-paper">
+            <p>Thank you for being you.</p>
+            <p>And thank you for letting me be me.</p>
+            <p class="envelope-names">Liam ♡ Frall</p>
+            <p class="envelope-since">Since 27 May 2026</p>
+          </div>
+        </div>
+      </div>
+      <button id="open-envelope-btn" class="btn-primary">Open it ♡</button>
+    </div>
+  </section>
+
+  <!-- FINAL -->
+  <section id="final" class="section section--dreamy-dark final-screen">
+    <div class="container narrow center">
+      <h2 class="final-names">Liam ♡ Frall</h2>
+      <p class="final-since">Since 27 May 2026</p>
+      <p class="final-tc">To be continued…</p>
+    </div>
+    <div class="opening-hearts" id="final-hearts" aria-hidden="true"></div>
+  </section>
+
+  <footer class="site-footer">
+    <p>made with ♡ for Frall</p>
+  </footer>
+
+</div><!-- /#main-site -->
+
+<!-- LIGHTBOX -->
+<div id="lightbox" class="lightbox" hidden role="dialog" aria-modal="true" aria-label="Foto kenangan">
+  <button id="lightbox-close" class="lightbox-close" aria-label="Tutup">✕</button>
+  <img id="lightbox-img" src="" alt="">
+  <p id="lightbox-caption" class="lightbox-caption"></p>
+</div>
+
+<!-- WHY YOU MODAL (card reveal, mobile friendly overlay optional not needed, cards flip in place) -->
+
+<!-- EASTER EGG TOAST -->
+<div id="egg-toast" class="egg-toast" role="status" aria-live="polite" hidden></div>
+
+<!-- MUSIC PLAYER -->
+<div id="music-player" class="music-player">
+  <button id="music-toggle" class="music-toggle" aria-label="Putar musik">
+    <span id="music-icon">♪</span>
+  </button>
+  <div class="music-panel">
+    <p class="music-title">♪ My Love Mine All Mine</p>
+    <div class="music-controls">
+      <button id="music-play" class="music-btn" aria-label="Play / Pause">▶</button>
+      <input id="music-seek" type="range" min="0" max="100" value="0" aria-label="Progres lagu">
+      <button id="music-vol-btn" class="music-btn music-btn--small" aria-label="Volume">🔊</button>
+      <input id="music-volume" type="range" min="0" max="1" step="0.01" value="0.6" aria-label="Volume lagu">
+    </div>
+  </div>
+  <audio id="audio" src="assets/music/our-song.mp3" preload="none" loop></audio>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
